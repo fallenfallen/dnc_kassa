@@ -1,0 +1,11 @@
+
+rm *.so
+
+qmake
+make
+
+
+cp -v ./.ui/*.h ../../../bin/include
+cp -v ./libdncservice.so ../../../bin/lib
+
+

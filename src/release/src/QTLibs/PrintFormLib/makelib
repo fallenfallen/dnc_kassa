@@ -1,0 +1,5 @@
+
+qmake
+make
+cp -v ./.ui/printform.h ../../../bin/include
+cp -v ./libdncprintformlib.so ../../../bin/lib

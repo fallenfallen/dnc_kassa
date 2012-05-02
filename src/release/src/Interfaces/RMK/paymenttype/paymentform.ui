@@ -1,0 +1,1015 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>paymentForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>paymentForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>540</width>
+            <height>330</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>0</hsizetype>
+            <vsizetype>0</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>540</width>
+            <height>330</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>540</width>
+            <height>330</height>
+        </size>
+    </property>
+    <property name="sizeIncrement">
+        <size>
+            <width>1</width>
+            <height>1</height>
+        </size>
+    </property>
+    <property name="baseSize">
+        <size>
+            <width>540</width>
+            <height>330</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Введите суммы оплаты</string>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>layout17</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>0</number>
+                </property>
+                <widget class="QLayoutWidget" row="5" column="0">
+                    <property name="name">
+                        <cstring>sumLayout</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer4</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>30</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>tallTextLabe</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteBackgroundColor">
+                                <color>
+                                    <red>169</red>
+                                    <green>206</green>
+                                    <blue>255</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>20</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>&lt;p align="left"&gt;Итого&lt;/p&gt;</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>allTextLabel</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>22</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>&lt;p align="center"&gt;&lt;/p&gt;</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLayoutWidget" row="4" column="0">
+                    <property name="name">
+                        <cstring>layout16</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer10</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lockcontPixmapLabel</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>lock.png</pixmap>
+                            </property>
+                            <property name="scaledContents">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>tcontpaymentTextLabel</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>true</bool>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteBackgroundColor">
+                                <color>
+                                    <red>169</red>
+                                    <green>206</green>
+                                    <blue>255</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Nimbus Sans L</family>
+                                    <pointsize>17</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>Тарой</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>contpaymentLineEdit</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>true</bool>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteForegroundColor">
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>127</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>22</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="focusPolicy">
+                                <enum>StrongFocus</enum>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string></string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLayoutWidget" row="0" column="0">
+                    <property name="name">
+                        <cstring>headerLayout</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>30</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>tostTextLabel</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>190</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteBackgroundColor">
+                                <color>
+                                    <red>169</red>
+                                    <green>206</green>
+                                    <blue>255</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>20</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>&lt;p align="center"&gt;Осталось по чеку&lt;/p&gt;</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>tpaymentTextLabel</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>5</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteBackgroundColor">
+                                <color>
+                                    <red>169</red>
+                                    <green>206</green>
+                                    <blue>255</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>20</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>&lt;p align="center"&gt;К оплате&lt;/p&gt;</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLayoutWidget" row="1" column="0">
+                    <property name="name">
+                        <cstring>infoLayout</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer2_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>30</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>ostTextLabel</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>5</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>22</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>&lt;p align="center"&gt;&lt;/p&gt;</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>paymentTextLabel</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>5</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>22</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>&lt;p align="center"&gt;&lt;/p&gt;</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLayoutWidget" row="3" column="0">
+                    <property name="name">
+                        <cstring>layout12</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer8</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>lockcredPixmapLabel</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>lock.png</pixmap>
+                            </property>
+                            <property name="scaledContents">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>tcredpaymentTextLabel</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>true</bool>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteBackgroundColor">
+                                <color>
+                                    <red>169</red>
+                                    <green>206</green>
+                                    <blue>255</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Nimbus Sans L</family>
+                                    <pointsize>17</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>Кредитом</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>credpaymentLineEdit</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>true</bool>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteForegroundColor">
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>127</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>22</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="focusPolicy">
+                                <enum>StrongFocus</enum>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string></string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLayoutWidget" row="2" column="0">
+                    <property name="name">
+                        <cstring>layout8</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer7</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>locknalPixmapLabel</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>1</hsizetype>
+                                    <vsizetype>1</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>lock.png</pixmap>
+                            </property>
+                            <property name="scaledContents">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>tnalpaymentTextLabel</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>270</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteBackgroundColor">
+                                <color>
+                                    <red>169</red>
+                                    <green>206</green>
+                                    <blue>255</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Nimbus Sans L</family>
+                                    <pointsize>17</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="frameShape">
+                                <enum>StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <property name="text">
+                                <string>Наличными</string>
+                            </property>
+                            <property name="alignment">
+                                <set>WordBreak|AlignCenter</set>
+                            </property>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>nalpaymentLineEdit</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>5</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>230</width>
+                                    <height>50</height>
+                                </size>
+                            </property>
+                            <property name="paletteForegroundColor">
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>127</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <pointsize>22</pointsize>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="focusPolicy">
+                                <enum>StrongFocus</enum>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string></string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>credpaymentLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>paymentForm</receiver>
+        <slot>CheckValue()</slot>
+    </connection>
+    <connection>
+        <sender>nalpaymentLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>paymentForm</receiver>
+        <slot>CommaTest(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>nalpaymentLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>paymentForm</receiver>
+        <slot>CheckValue()</slot>
+    </connection>
+    <connection>
+        <sender>credpaymentLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>paymentForm</receiver>
+        <slot>CommaTest(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>contpaymentLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>paymentForm</receiver>
+        <slot>CheckValue()</slot>
+    </connection>
+    <connection>
+        <sender>contpaymentLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>paymentForm</receiver>
+        <slot>CommaTest(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>contpaymentLineEdit</sender>
+        <signal>lostFocus()</signal>
+        <receiver>paymentForm</receiver>
+        <slot>mouseSelect()</slot>
+    </connection>
+    <connection>
+        <sender>credpaymentLineEdit</sender>
+        <signal>lostFocus()</signal>
+        <receiver>paymentForm</receiver>
+        <slot>mouseSelect()</slot>
+    </connection>
+    <connection>
+        <sender>nalpaymentLineEdit</sender>
+        <signal>lostFocus()</signal>
+        <receiver>paymentForm</receiver>
+        <slot>mouseSelect()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>nalpaymentLineEdit</tabstop>
+    <tabstop>credpaymentLineEdit</tabstop>
+    <tabstop>contpaymentLineEdit</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">qvalidator.h</include>
+    <include location="local" impldecl="in declaration">blocktimer.h</include>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="local" impldecl="in declaration">authorization.h</include>
+    <include location="global" impldecl="in declaration">qaccel.h</include>
+    <include location="local" impldecl="in declaration">payment_validator.h</include>
+    <include location="local" impldecl="in declaration">messages.h</include>
+    <include location="global" impldecl="in declaration">qapplication.h</include>
+    <include location="global" impldecl="in declaration">qfocusdata.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in implementation">paymentform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">double max_cont;</variable>
+    <variable access="private">double ReturnAdditSumm;</variable>
+    <variable access="private">int CreditOperationType;</variable>
+    <variable access="private">double max_credit;</variable>
+    <variable access="private">double max_nal;</variable>
+    <variable access="private">QTextCodec * DefCodec;</variable>
+    <variable access="private">int return_flag;</variable>
+    <variable access="private">int CreditStatus;</variable>
+    <variable access="private">int CheckNum;</variable>
+    <variable access="private">double min_kup;</variable>
+    <variable access="private">double max_kup;</variable>
+    <variable access="private">QString tara;</variable>
+    <variable access="private">QString kredit;</variable>
+    <variable access="private">QString nal;</variable>
+    <variable access="private">bool plus_flag;</variable>
+    <variable access="private">bool contrequestauthflag;</variable>
+    <variable access="private">bool credrequestauthflag;</variable>
+    <variable access="private">bool nalrequestauthflag;</variable>
+    <variable access="private">QLineEdit *editline;</variable>
+    <variable access="private">PaymentSumValidator *contpv;</variable>
+    <variable access="private">PaymentSumValidator *credpv;</variable>
+    <variable access="private">PaymentSumValidator *nalpv;</variable>
+    <variable access="private">QString str;</variable>
+    <variable access="private">double nalsum;</variable>
+    <variable access="private">double credsum;</variable>
+    <variable access="private">double contsum;</variable>
+    <variable access="private">double paymentsum;</variable>
+    <variable access="private">QString nalstr;</variable>
+    <variable access="private">QString credstr;</variable>
+    <variable access="private">QString contstr;</variable>
+    <variable access="private">bool ready_flag;</variable>
+    <variable access="private">PaymentSumValidator *v;</variable>
+</variables>
+<slots>
+    <slot>SetCheckNum( int check_num )</slot>
+    <slot>SetMaxNalSum( double sum )</slot>
+    <slot>SetMaxCredSum( double sum )</slot>
+    <slot>SetReturnType()</slot>
+    <slot>SetPaymentType()</slot>
+    <slot>InitValidatorProperties()</slot>
+    <slot>InitAccels()</slot>
+    <slot>InitRights()</slot>
+    <slot>InitCurLineEdit()</slot>
+    <slot>SetReadyFlag( bool fl )</slot>
+    <slot>SetCreditOperationType( int type )</slot>
+    <slot>SetReturnAdditSumm( double s )</slot>
+    <slot>SetPaymentSum( double s )</slot>
+    <slot>SetCredPaymentSum( double s )</slot>
+    <slot returnType="int">SetNalPaymentSum( double s )</slot>
+    <slot>SetNalIntoNal( double s )</slot>
+    <slot>SetValidatorProperties()</slot>
+    <slot>DeleteValidatorProperties()</slot>
+    <slot>GetSumParameters( double &amp; nal, double &amp; cred, double &amp; cont, double &amp; psum )</slot>
+    <slot>GetRightsParameters( int * &amp; mas_index, int &amp; num )</slot>
+    <slot>SaveChecked( QString s )</slot>
+    <slot>CommaTest( const QString &amp; kstr )</slot>
+    <slot>CheckValue()</slot>
+    <slot>RejectedClosePaymentForm()</slot>
+    <slot>AcceptedClosePaymentForm()</slot>
+    <slot>ClearCurLineEdit()</slot>
+    <slot>AddSufixString( QLineEdit * le )</slot>
+    <slot>SwitchUpFocus()</slot>
+    <slot>SwitchDownFocus()</slot>
+    <slot>Message( int mes )</slot>
+    <slot specifier="non virtual">AddDoubleZero()</slot>
+    <slot>mouseSelect()</slot>
+    <slot>SetMaxContSum( double sum )</slot>
+    <slot>SetContPaymentSum( double s )</slot>
+</slots>
+<functions>
+    <function returnType="int">GetCreditStatus()</function>
+    <function returnType="double">GetMaxNalSum()</function>
+    <function returnType="double">GetMaxCredSum()</function>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+    <function returnType="double">GetNalSum()</function>
+    <function returnType="double">GetCredSum()</function>
+    <function returnType="double">GetContSum()</function>
+    <function access="private" specifier="non virtual" returnType="bool">selectNalEdit()</function>
+    <function access="private" specifier="non virtual" returnType="bool">selectCredEdit()</function>
+    <function access="private" specifier="non virtual" returnType="bool">selectContEdit()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

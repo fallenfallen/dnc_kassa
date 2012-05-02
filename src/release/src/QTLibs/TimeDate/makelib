@@ -1,0 +1,9 @@
+rm *.so*
+qmake
+make
+
+cp -v time_date.h ../../../bin/include
+
+cp -v ./libdnctimedate.so ../../../bin/lib
+
+

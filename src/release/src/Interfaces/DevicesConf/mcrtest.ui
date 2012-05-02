@@ -1,0 +1,599 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>MCRTest</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>MCRTest</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>734</width>
+            <height>592</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Тест ридера  магнитных карт</string>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QGroupBox" row="0" column="0">
+            <property name="name">
+                <cstring>MCRgroupBox</cstring>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupBox22</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>11</x>
+                        <y>66</y>
+                        <width>690</width>
+                        <height>100</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string></string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>MCRInfo_textLabel</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>20</y>
+                            <width>670</width>
+                            <height>60</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="alignment">
+                        <set>WordBreak|AlignVCenter</set>
+                    </property>
+                    <property name="indent">
+                        <number>-1</number>
+                    </property>
+                </widget>
+            </widget>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer114</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>22</height>
+                    </size>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>346</x>
+                        <y>172</y>
+                        <width>20</width>
+                        <height>22</height>
+                    </rect>
+                </property>
+            </spacer>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer177</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>21</height>
+                    </size>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>346</x>
+                        <y>39</y>
+                        <width>20</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+            </spacer>
+            <spacer>
+                <property name="name">
+                    <cstring>spacer115</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>21</height>
+                    </size>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>346</x>
+                        <y>416</y>
+                        <width>20</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+            </spacer>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupBox18</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>440</y>
+                        <width>690</width>
+                        <height>78</height>
+                    </rect>
+                </property>
+                <property name="lineWidth">
+                    <number>1</number>
+                </property>
+                <property name="title">
+                    <string></string>
+                </property>
+                <property name="flat">
+                    <bool>false</bool>
+                </property>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLayoutWidget" row="0" column="0">
+                        <property name="name">
+                            <cstring>layout153</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Префикс 1</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>MCRPref1</cstring>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer166</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>100</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel4_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Суффикс 1</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>MCRSuf1</cstring>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer167</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>90</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget" row="1" column="0">
+                        <property name="name">
+                            <cstring>layout152</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel3_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Префикс 2</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>MCRPref2</cstring>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer165</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>105</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel5_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Суффикс 2</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>MCRSuf2</cstring>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer164</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>104</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>textLabel1</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>11</x>
+                        <y>11</y>
+                        <width>690</width>
+                        <height>22</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>&lt;font size="+1"&gt;&lt;p align="center"&gt;&lt;b&gt;Считанная с карты информация:&lt;/b&gt;&lt;/p&gt;&lt;/font&gt;</string>
+                </property>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupBox3</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>11</x>
+                        <y>200</y>
+                        <width>690</width>
+                        <height>210</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string></string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel3_4</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>150</y>
+                            <width>75</width>
+                            <height>30</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>3 дорожка:</string>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>MCRCode2textLabel</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>90</y>
+                            <width>580</width>
+                            <height>30</height>
+                        </rect>
+                    </property>
+                    <property name="paletteBackgroundColor">
+                        <color>
+                            <red>238</red>
+                            <green>238</green>
+                            <blue>230</blue>
+                        </color>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="alignment">
+                        <set>WordBreak|AlignVCenter</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel3_3</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>90</y>
+                            <width>75</width>
+                            <height>30</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>2 дорожка:</string>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel3</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>30</y>
+                            <width>75</width>
+                            <height>30</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>1 дорожка:</string>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>MCRCode3textLabel</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>150</y>
+                            <width>580</width>
+                            <height>30</height>
+                        </rect>
+                    </property>
+                    <property name="paletteBackgroundColor">
+                        <color>
+                            <red>238</red>
+                            <green>238</green>
+                            <blue>230</blue>
+                        </color>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="alignment">
+                        <set>WordBreak|AlignVCenter</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>MCRCode1textLabel</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>30</y>
+                            <width>580</width>
+                            <height>30</height>
+                        </rect>
+                    </property>
+                    <property name="paletteBackgroundColor">
+                        <color>
+                            <red>238</red>
+                            <green>238</green>
+                            <blue>230</blue>
+                        </color>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="alignment">
+                        <set>WordBreak|AlignVCenter</set>
+                    </property>
+                </widget>
+            </widget>
+        </widget>
+        <widget class="QLayoutWidget" row="1" column="0">
+            <property name="name">
+                <cstring>layout150</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>Save</cstring>
+                    </property>
+                    <property name="focusPolicy">
+                        <enum>TabFocus</enum>
+                    </property>
+                    <property name="text">
+                        <string>Сохранить</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer51</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>480</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>closeButton</cstring>
+                    </property>
+                    <property name="focusPolicy">
+                        <enum>TabFocus</enum>
+                    </property>
+                    <property name="text">
+                        <string>Закрыть</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </grid>
+</widget>
+<tabstops>
+    <tabstop>MCRPref1</tabstop>
+    <tabstop>MCRPref2</tabstop>
+    <tabstop>MCRSuf1</tabstop>
+    <tabstop>MCRSuf2</tabstop>
+    <tabstop>Save</tabstop>
+    <tabstop>closeButton</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="global" impldecl="in declaration">signal.h</include>
+    <include location="global" impldecl="in declaration">sys/types.h</include>
+    <include location="global" impldecl="in declaration">sys/wait.h</include>
+    <include location="global" impldecl="in declaration">qdatetime.h</include>
+    <include location="local" impldecl="in declaration">hwsrv.h</include>
+    <include location="global" impldecl="in declaration">qtimer.h</include>
+    <include location="global" impldecl="in declaration">X11/Xlib.h</include>
+    <include location="global" impldecl="in declaration">X11/XKBlib.h</include>
+    <include location="local" impldecl="in declaration">mcrkbinput.h</include>
+    <include location="local" impldecl="in declaration">dkbinput.h</include>
+    <include location="local" impldecl="in implementation">mcrtest.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">KeyboardReader kbcode_reader;</variable>
+    <variable access="private">QTextCodec* DefCodec;</variable>
+    <variable access="private">XkbStateRec state;</variable>
+    <variable access="private">QString prefsuf;</variable>
+    <variable access="private">QTimer * timer;</variable>
+    <variable access="private">bool timer_flag;</variable>
+    <variable access="private">bool third_track_flag;</variable>
+    <variable access="private">bool second_track_flag;</variable>
+    <variable access="private">bool first_track_flag;</variable>
+    <variable access="private">QString ThirdTrack;</variable>
+    <variable access="private">QString SecondTrack;</variable>
+    <variable access="private">QString FirstTrack;</variable>
+    <variable access="public">bool save_flag;</variable>
+    <variable access="private">bool suf2_agree;</variable>
+    <variable access="private">bool suf1_agree;</variable>
+    <variable access="private">bool pref2_agree;</variable>
+    <variable access="private">bool pref1_agree;</variable>
+    <variable access="private">QString Su2;</variable>
+    <variable access="private">QString Su1;</variable>
+    <variable access="private">QString Pr2;</variable>
+    <variable access="private">QString Pr1;</variable>
+    <variable access="private">int col_pref;</variable>
+    <variable access="private">int col_suf;</variable>
+    <variable access="private">QString BarCodeString;</variable>
+    <variable access="public">int Type;</variable>
+    <variable access="public">int Pref1;</variable>
+    <variable access="public">int ErrNum;</variable>
+    <variable access="private">bool StartSt;</variable>
+    <variable access="private">pid_t ParentPid;</variable>
+    <variable access="private">pid_t ChildPid;</variable>
+    <variable access="private">int PortFileDescr;</variable>
+    <variable access="public">int BaudRate;</variable>
+    <variable access="public">int PortNumber;</variable>
+    <variable access="public">int Pref2;</variable>
+    <variable access="public">int Suf1;</variable>
+    <variable access="public">int Suf2;</variable>
+</variables>
+<slots>
+    <slot>MyInitRS232( void )</slot>
+    <slot>MyInitKlavaPort( void )</slot>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+    <slot>ReaderSignal()</slot>
+    <slot>clearInfo()</slot>
+    <slot>TimeOut()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>SavePrefSuf()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

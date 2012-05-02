@@ -1,0 +1,28 @@
+menu "ДЭНСИ:КАССА v.1" /usr/share/dnc/icons_for_icewm_menu/dnc3.png {
+        prog "Запуск ДЭНСИ:КАССА" /usr/share/dnc/icons_for_icewm_menu/dnc1.png /usr/bin/run_reshka
+        prog "Настройка секций" /usr/share/dnc/icons_for_icewm_menu/development_section.png /usr/bin/SectionSetup
+	prog "Налоговый инспектор" /usr/share/dnc/icons_for_icewm_menu/accessories_dictionary.png /usr/bin/dnc_taxinspector
+	prog "Настройка сервера дисконта" /usr/share/dnc/icons_for_icewm_menu/development_section.png /usr/bin/dnc_configtool
+	prog "Обновление ДЭНСИ:КАССА из *.iso образа" /usr/share/dnc/icons_for_icewm_menu/compression_section.png /usr/bin/dnc_gksu_iso
+	prog "Обновление ДЭНСИ:КАССА с CD" /usr/share/dnc/icons_for_icewm_menu/cd_burning_section.png xterm /usr/bin/update_from_cd
+		menu "Экспорт/Импорт БД" /usr/share/dnc/icons_for_icewm_menu/view-refresh.png {
+			prog "Экспорт LinCash" /usr/share/dnc/icons_for_icewm_menu/edit-redo.png /usr/bin/dnc_LinCash_export_root
+			prog "Импорт LinCash" /usr/share/dnc/icons_for_icewm_menu/edit-undo.png /usr/bin/dnc_LinCash_import_root
+			prog "Экспорт Transaction" /usr/share/dnc/icons_for_icewm_menu/edit-redo.png /usr/bin/dnc_Transaction_export_root
+			prog "Импорт Transaction" /usr/share/dnc/icons_for_icewm_menu/edit-undo.png /usr/bin/dnc_Transaction_import_root
+		}
+}
+menu "Утилиты" system_section.png {
+	prog "Блокнот" kwrite.png kwrite 
+	prog "Панель управления" drakconf.png /usr/sbin/drakconf
+	prog "Файловый менеджер PCManFM" documentation_section.png /usr/bin/pcmanfm
+	prog "Текстовый редактор LeafPad" leafpad.png /usr/bin/leafpad
+	prog "Калькулятор" galculator.png /usr/bin/galculator
+	prog "Снимок экрана" /usr/share/dnc/icons_for_icewm_menu/graphics_section.png /usr/bin/dnc_screen_scrot
+	prog "FTP-клиент" gftp.png /usr/bin/gftp 
+	prog "Терминал" /usr/share/icons/mini/terminals_section.png xterm -name Terminal
+}
+menu "Завершение работы" reboot.png {
+	prog "ПЕРЕЗАГРУЗКА" nopic.png reboot
+	prog "ВЫКЛЮЧИТЬ" nopic.png halt
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>synchronizationForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>synchronizationForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>360</width>
+            <height>310</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>360</width>
+            <height>310</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>360</width>
+            <height>310</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Синхронизация времени</string>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <widget class="QFrame">
+        <property name="name">
+            <cstring>kkmFrame</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>340</width>
+                <height>120</height>
+            </rect>
+        </property>
+        <property name="sizePolicy">
+            <sizepolicy>
+                <hsizetype>1</hsizetype>
+                <vsizetype>1</vsizetype>
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>340</width>
+                <height>120</height>
+            </size>
+        </property>
+        <property name="frameShape">
+            <enum>StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Raised</enum>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>kkmtimeTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>70</y>
+                    <width>120</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>1</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>120</width>
+                    <height>30</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Время кассы</string>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>kkmdateTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>10</y>
+                    <width>120</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>1</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>120</width>
+                    <height>30</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Дата кассы</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QFrame">
+        <property name="name">
+            <cstring>pkFrame</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>140</y>
+                <width>340</width>
+                <height>120</height>
+            </rect>
+        </property>
+        <property name="sizePolicy">
+            <sizepolicy>
+                <hsizetype>1</hsizetype>
+                <vsizetype>1</vsizetype>
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>340</width>
+                <height>120</height>
+            </size>
+        </property>
+        <property name="frameShape">
+            <enum>StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Raised</enum>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>pkdateTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>20</y>
+                    <width>120</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>1</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>120</width>
+                    <height>30</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>120</width>
+                    <height>30</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Дата ПК</string>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>pktimeTextLabel</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>70</y>
+                    <width>120</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>1</hsizetype>
+                    <vsizetype>1</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>120</width>
+                    <height>30</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Время ПК</string>
+            </property>
+        </widget>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>cancelPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>190</x>
+                <y>270</y>
+                <width>160</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>160</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="font">
+            <font>
+                <pointsize>12</pointsize>
+            </font>
+        </property>
+        <property name="text">
+            <string>Отмена</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>syncPushButton</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>271</y>
+                <width>170</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>160</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="font">
+            <font>
+                <pointsize>12</pointsize>
+            </font>
+        </property>
+        <property name="text">
+            <string>Синхронизировать</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>syncPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>synchronizationForm</receiver>
+        <slot>Synchronize()</slot>
+    </connection>
+    <connection>
+        <sender>cancelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>synchronizationForm</receiver>
+        <slot>Cancel()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">time_date.h</include>
+    <include location="global" impldecl="in declaration">qdatetime.h</include>
+    <include location="local" impldecl="in declaration">hwsrv.h</include>
+    <include location="local" impldecl="in declaration">blocktimer.h</include>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="global" impldecl="in declaration">qlayout.h</include>
+    <include location="local" impldecl="in declaration">messages.h</include>
+    <include location="local" impldecl="in implementation">synchronizationform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">QGridLayout * kkmframeLayout;</variable>
+    <variable access="private">QGridLayout * pkframeLayout;</variable>
+    <variable access="public">bool kkm_connect;</variable>
+    <variable access="private">DigitalTime *kkm_time;</variable>
+    <variable access="private">DigitalTime *pk_time;</variable>
+    <variable access="private">DigitalDate *pk_date;</variable>
+    <variable access="private">DigitalDate *kkm_date;</variable>
+</variables>
+<signals>
+    <signal>Sync()</signal>
+</signals>
+<slots>
+    <slot>Synchronize()</slot>
+    <slot>Cancel()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>SetSelectionLeft()</slot>
+    <slot>SetSelectionRight()</slot>
+    <slot>Kkm_Error( int er )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

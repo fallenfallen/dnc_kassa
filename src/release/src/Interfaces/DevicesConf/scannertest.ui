@@ -1,0 +1,143 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>ScannerTest</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>ScannerTest</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>734</width>
+            <height>197</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Тест сканера</string>
+    </property>
+    <property name="focusPolicy">
+        <enum>TabFocus</enum>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="resizeMode">
+            <enum>Fixed</enum>
+        </property>
+        <widget class="QGroupBox" row="0" column="0">
+            <property name="name">
+                <cstring>groupBox2</cstring>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <widget class="QLayoutWidget">
+                <property name="name">
+                    <cstring>layout61</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>10</y>
+                        <width>690</width>
+                        <height>150</height>
+                    </rect>
+                </property>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLabel" row="0" column="0">
+                        <property name="name">
+                            <cstring>textLabel1</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&lt;p align="center"&gt;Просканируйте что-нибудь&lt;/p&gt;</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="2" column="0">
+                        <property name="name">
+                            <cstring>closeButton</cstring>
+                        </property>
+                        <property name="focusPolicy">
+                            <enum>TabFocus</enum>
+                        </property>
+                        <property name="text">
+                            <string>Закрыть</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="1" column="0">
+                        <property name="name">
+                            <cstring>BarCodetextLabel</cstring>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <pointsize>13</pointsize>
+                                <bold>1</bold>
+                            </font>
+                        </property>
+                        <property name="text">
+                            <string></string>
+                        </property>
+                        <property name="alignment">
+                            <set>WordBreak|AlignCenter</set>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
+        </widget>
+    </grid>
+</widget>
+<includes>
+    <include location="global" impldecl="in declaration">signal.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="global" impldecl="in declaration">sys/types.h</include>
+    <include location="global" impldecl="in declaration">sys/wait.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">hwsrv.h</include>
+    <include location="global" impldecl="in declaration">X11/Xlib.h</include>
+    <include location="global" impldecl="in declaration">X11/XKBlib.h</include>
+    <include location="local" impldecl="in declaration">bcskbinput.h</include>
+    <include location="local" impldecl="in implementation">scannertest.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">QTimer * timer;</variable>
+    <variable access="private">pid_t ChildPid;</variable>
+    <variable>FILE *fp;</variable>
+    <variable access="private">QTextCodec *DefCodec;</variable>
+    <variable access="public">int PortNumber;</variable>
+    <variable access="public">int ErrNum;</variable>
+    <variable access="private">int PortFileDescr;</variable>
+    <variable access="private">pid_t ParentPid;</variable>
+    <variable access="private">char* way;</variable>
+    <variable access="private">bool StartSt;</variable>
+    <variable access="public">int BaudRate;</variable>
+    <variable access="private">bool timer_flag;</variable>
+    <variable access="private">bool alt_flag;</variable>
+    <variable access="public">int Pref1;</variable>
+    <variable access="public">int Pref2;</variable>
+    <variable access="public">int Suf1;</variable>
+    <variable access="public">int Suf2;</variable>
+    <variable access="public">int Type;</variable>
+    <variable access="private">QString BarCodeString;</variable>
+    <variable access="private">QString BarCode;</variable>
+    <variable access="private">XkbStateRec state;</variable>
+    <variable access="private">KeyboardScaner kbcode_scaner;</variable>
+    <variable access="private">QTime t;</variable>
+</variables>
+<slots>
+    <slot>InsertParam( int TypeBCS, int PortNum, int BaudR, int Pr1, int Pr2, int Su1, int Su2 )</slot>
+    <slot>MyInit( void )</slot>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+    <slot>TimeOut()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function returnType="QString">GetPar( int par_number )</function>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

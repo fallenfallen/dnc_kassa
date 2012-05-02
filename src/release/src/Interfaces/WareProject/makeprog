@@ -1,0 +1,4 @@
+qmake
+make
+
+cp -v ./WareProject ../../../bin/bin

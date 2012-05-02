@@ -1,0 +1,11 @@
+
+
+g++ -Wno-deprecated -fpic -c -I ../../../bin/include  reader_config.cpp reader_config_load_unload.cpp
+g++ -shared -WI, -o libdncreadconf.so reader_config.o reader_config_load_unload.o
+
+cp -v *.h ../../../bin/include
+cp -v ./libdncreadconf.so ../../../bin/lib
+
+rm *.o
+
+

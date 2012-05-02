@@ -1,0 +1,7 @@
+
+cp -v messages.h ../../../bin/include
+qmake
+make
+
+cp -v ./libdncmessages.so ../../../bin/lib
+

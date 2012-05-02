@@ -1,0 +1,4 @@
+qmake
+make
+cp -v ./SetupLoadUnload ../../../bin/bin
+

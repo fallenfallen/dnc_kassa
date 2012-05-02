@@ -1,0 +1,6 @@
+
+cp -v *.h ../../../bin/include
+qmake
+make
+
+cp -v libdncdkbinput.so ../../../bin/lib

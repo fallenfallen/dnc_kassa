@@ -1,0 +1,191 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>DeletePositionByTimeRistrictionForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>DeletePositionByTimeRistrictionForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>793</width>
+            <height>406</height>
+        </rect>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>800</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property name="font">
+        <font>
+        </font>
+    </property>
+    <property name="caption">
+        <string>Список позиций</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1</cstring>
+            </property>
+            <property name="paletteForegroundColor">
+                <color>
+                    <red>150</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string>Внимание!!! 
+В чеке есть товары, не подлежащие реализации в связи с ограничением их продажи по времени!
+Нижеуказанные позиции чека будут автоматически сторнированы.
+Нажмите [ОК] (ОПЛАТА) для возврата к чеку и повторного расчета с покупателем.</string>
+            </property>
+            <property name="alignment">
+                <set>WordBreak|AlignCenter</set>
+            </property>
+        </widget>
+        <widget class="QTable">
+            <column>
+                <property name="text">
+                    <string>Код</string>
+                </property>
+            </column>
+            <column>
+                <property name="text">
+                    <string>Название</string>
+                </property>
+            </column>
+            <column>
+                <property name="text">
+                    <string>Количество</string>
+                </property>
+            </column>
+            <property name="name">
+                <cstring>positionTable</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <family>URW Gothic L</family>
+                    <bold>1</bold>
+                </font>
+            </property>
+            <property name="focusPolicy">
+                <enum>NoFocus</enum>
+            </property>
+            <property name="numRows">
+                <number>0</number>
+            </property>
+            <property name="numCols">
+                <number>3</number>
+            </property>
+            <property name="readOnly">
+                <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+                <enum>SingleRow</enum>
+            </property>
+            <property name="focusStyle">
+                <enum>FollowStyle</enum>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout12</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer7</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>181</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>okPushButton</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>ОК</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer7_2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>181</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>okPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>DeletePositionByTimeRistrictionForm</receiver>
+        <slot>okPushButton_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>okPushButton</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">receipt.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="global" impldecl="in declaration">qstring.h</include>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="local" impldecl="in implementation">deletepositionbytimeristrictionform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">QTextCodec * DbCodec;</variable>
+</variables>
+<slots>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>okPushButton_clicked()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function>setReceipt( Receipt * receipt )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -1,0 +1,380 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>authorizationForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>authorizationForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>678</width>
+            <height>201</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Авторизация</string>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QGroupBox" row="1" column="1">
+            <property name="name">
+                <cstring>groupBox1</cstring>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>tnameTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>30</y>
+                        <width>100</width>
+                        <height>30</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Имя</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>tprofileTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>70</y>
+                        <width>100</width>
+                        <height>30</height>
+                    </rect>
+                </property>
+                <property name="frameShape">
+                    <enum>NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                    <enum>Plain</enum>
+                </property>
+                <property name="text">
+                    <string>Профиль</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>tpasswordTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>110</y>
+                        <width>100</width>
+                        <height>30</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Пароль</string>
+                </property>
+            </widget>
+            <widget class="QLabel">
+                <property name="name">
+                    <cstring>profileTextLabel</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>110</x>
+                        <y>70</y>
+                        <width>310</width>
+                        <height>30</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string></string>
+                </property>
+            </widget>
+            <widget class="QComboBox">
+                <property name="name">
+                    <cstring>nameComboBox</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>110</x>
+                        <y>30</y>
+                        <width>310</width>
+                        <height>30</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QLineEdit">
+                <property name="name">
+                    <cstring>passwordLineEdit</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>true</bool>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>110</x>
+                        <y>110</y>
+                        <width>310</width>
+                        <height>30</height>
+                    </rect>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QLayoutWidget" row="1" column="0">
+            <property name="name">
+                <cstring>layout2</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                        <size>
+                            <width>32767</width>
+                            <height>40</height>
+                        </size>
+                    </property>
+                    <property name="text">
+                        <string>Доступные способы авторизации:</string>
+                    </property>
+                    <property name="alignment">
+                        <set>WordBreak|AlignVCenter</set>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout1</cstring>
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel" row="0" column="1">
+                            <property name="name">
+                                <cstring>passwordableTextLabel</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>7</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="text">
+                                <string>по паролю</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="2" column="1">
+                            <property name="name">
+                                <cstring>cardableTextLabel</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>7</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="text">
+                                <string>магнитной картой</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="1" column="0">
+                            <property name="name">
+                                <cstring>barcodeablePixmapLabel</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>17</width>
+                                    <height>17</height>
+                                </size>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>Untitled-1.png</pixmap>
+                            </property>
+                            <property name="scaledContents">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="0" column="0">
+                            <property name="name">
+                                <cstring>passwordablePixmapLabel</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>17</width>
+                                    <height>17</height>
+                                </size>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>Untitled-1.png</pixmap>
+                            </property>
+                            <property name="scaledContents">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="1" column="1">
+                            <property name="name">
+                                <cstring>barcodeableTextLabel</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>7</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="text">
+                                <string>по штрих коду</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="2" column="0">
+                            <property name="name">
+                                <cstring>cardablePixmapLabel</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>17</width>
+                                    <height>17</height>
+                                </size>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>Untitled-1.png</pixmap>
+                            </property>
+                            <property name="scaledContents">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                    </grid>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Preferred</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>21</width>
+                            <height>30</height>
+                        </size>
+                    </property>
+                </spacer>
+            </vbox>
+        </widget>
+    </grid>
+</widget>
+<tabstops>
+    <tabstop>nameComboBox</tabstop>
+    <tabstop>passwordLineEdit</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">accessrights.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="global" impldecl="in declaration">qlistbox.h</include>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="global" impldecl="in declaration">signal.h</include>
+    <include location="local" impldecl="in declaration">hwsrv.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="local" impldecl="in declaration">messages.h</include>
+    <include location="local" impldecl="in declaration">bcskbinput.h</include>
+    <include location="local" impldecl="in declaration">mcrkbinput.h</include>
+    <include location="local" impldecl="in declaration">hwsighandlerscontroller.h</include>
+    <include location="local" impldecl="in implementation">authorizationform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">bool block_mode;</variable>
+    <variable access="private">int author_user;</variable>
+    <variable access="public">int count_authorization;</variable>
+    <variable access="private">QTextCodec *DbCodec;</variable>
+    <variable access="private">int new_uid;</variable>
+    <variable access="private">bool new_rights[40];</variable>
+    <variable access="private">bool one_operation_flag;</variable>
+    <variable access="private">QListBox *userListBox;</variable>
+    <variable access="private">int *idents;</variable>
+    <variable access="private">char **user_profile;</variable>
+    <variable access="private">char **user_name;</variable>
+    <variable access="private">QTextCodec *DefCodec;</variable>
+    <variable access="private">int num_user;</variable>
+    <variable access="private">char *new_user_name;</variable>
+    <variable access="public">bool wait_signal;</variable>
+</variables>
+<slots>
+    <slot>showEvent( QShowEvent * s )</slot>
+    <slot>ReaderSignal( const char * track )</slot>
+    <slot>ScanerSignal( const char * barcode )</slot>
+    <slot>ChangeProfileName( int cur )</slot>
+    <slot>ChangeFocus()</slot>
+    <slot>ChangeComboItemUp()</slot>
+    <slot>ChangeComboItemDown()</slot>
+    <slot>UserSelected()</slot>
+    <slot>CardcodeAuthorization( const char * cardcode )</slot>
+    <slot>BarcodeAuthorization( const char * barcode )</slot>
+    <slot>PasswordAuthorization()</slot>
+    <slot>Authorization( int res, int uid )</slot>
+    <slot>GetNewRights( bool * rights )</slot>
+    <slot>GetNewUser( char * &amp; user, int &amp; uid )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>Error( int er )</slot>
+    <slot>Message( int m )</slot>
+    <slot>SetBlockMode( bool ablock_mode )</slot>
+    <slot returnType="bool">GetBlockMode()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+    <function returnType="int">InitUserList( int * rindex, int num_rights )</function>
+    <function returnType="int">SetNewRights( int uid )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

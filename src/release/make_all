@@ -1,0 +1,204 @@
+#QT4MAKE=/opt/QtSDK/Desktop/Qt/473/gcc/bin/qmake
+QT4MAKE=/opt/qtsdk-2010.05/qt/bin/qmake
+
+cd src/Libs/
+
+cd AddonFunc
+./makelib
+cd ../
+
+cd dncutil
+./makelib
+cd ../
+
+cd dncdbmanager
+./makelib
+cd ../
+
+cd dncpersistent
+./makelib
+cd ../
+
+cd dncdecoder_qt4
+./makelib $QT4MAKE
+cd ../
+
+cd dncwaresystem
+./makelib
+cd ../
+
+cd DebugLevelLog
+./makelib
+cd ../
+
+cd Encoding
+./makelib
+cd ../
+
+cd Reader_Config
+./makelib
+cd ../
+
+cd Receipt
+./makelib
+cd ../
+
+cd Setup_param
+./makelib
+cd ../
+
+cd PostgresLib
+./makelib
+cd ../
+
+cd StateStore
+./makelib
+cd ../
+
+#------------------------
+cd ../QTLibs
+
+cd dncdecoder
+./makelib
+cd ../
+
+cd BlockTimer
+./makelib
+cd ../
+
+cd CdspView
+./makelib
+cd ../
+
+cd CreateNewScheme
+./makelib
+cd ../
+
+cd CreateNewSchemePerec
+./makelib
+cd ../
+
+cd DedicateComboBox
+./makelib
+cd ../
+
+cd KeyboardDevices
+./makelib
+cd ../
+
+cd Messages
+./makelib
+cd ../
+
+cd HwSignalController
+./makelib
+cd ../
+
+cd AuthorizationForm
+./makelib
+cd ../
+
+cd AuthorizationObject
+./makelib
+cd ../
+
+cd AddWareController
+./makelib
+cd ../
+
+cd StrickOutTabItm
+./makelib
+cd ../
+
+cd TimeDate
+./makelib
+cd ../
+
+cd KkmRegistration
+./makelib
+cd ../
+
+cd InsertTransaction
+./makelib
+cd ../
+
+
+cd PrintFormLib
+./makelib
+cd ../
+
+cd InpasLib
+./makelib
+cd ../
+
+#------------------------
+cd ../Interfaces
+
+cd AccessRights
+./makeprog
+cd ../
+
+cd DevicesConf
+./makeprog
+cd ../
+
+cd ServiceLib
+./makelib
+cd ../
+
+cd SetupLib
+./makelib
+cd ../
+
+cd RMK
+./makeprog
+cd ../
+
+cd Reshka
+./makeprog
+cd ../
+
+cd SetupLoadUnload
+./makeprog
+cd ../
+
+cd WareProject
+./makeprog
+cd ../
+
+cd TaxInspector
+./makeprog $QT4MAKE
+cd ../
+
+cd SectionSetup
+./makeprog $QT4MAKE
+cd ../
+
+cd ConfigTool
+./makeprog $QT4MAKE
+cd ../
+
+#------------------------
+cd ../daemons
+
+cd DisplayDaemon
+./makeprog
+cd ../
+
+cd Upload
+./makeprog
+cd ../
+
+cd daemon_unload
+./makeprog
+cd ../
+
+cd DiscountMobile
+./makeprog $QT4MAKE
+cd ../
+
+#------------------------
+
+cd ../DBUpdate
+./makeprog
+cd ../

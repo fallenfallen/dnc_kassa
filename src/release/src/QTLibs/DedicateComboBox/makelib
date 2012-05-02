@@ -1,0 +1,8 @@
+
+cp -v dedicationcombobox.h ../../../bin/include
+
+qmake
+make
+
+cp -v ./libdncdedicationcombobox.so ../../../bin/lib
+

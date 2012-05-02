@@ -1,0 +1,17 @@
+#!/bin/bash
+
+(
+echo "10"
+echo "# Vacuumdb Transaction..."
+vacuumdb -U kassir Transaction
+echo "50"
+echo "# Dump Transaction..."
+FNAME=Transaction_$(date +%Y_%m_%d_%X)
+pg_dump -U kassir Transaction > /dnc_arch/$FNAME
+echo "90"
+echo "# Создаем архив $FNAME ..."
+gzip -q /dnc_arch/*
+echo "100"
+zenity --info --text="Создан файл /dnc_arch/$FNAME"
+) |
+zenity --progress --title="Dump Transaction" --auto-close

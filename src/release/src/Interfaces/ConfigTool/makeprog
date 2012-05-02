@@ -1,0 +1,9 @@
+rm -vfR ./moc
+rm -vfR ./obj
+
+$1 ./ConfigTool.pro
+make
+cp -vf ./dnc_configtool ../../../bin/bin
+
+rm -vfR ./moc
+rm -vfR ./obj

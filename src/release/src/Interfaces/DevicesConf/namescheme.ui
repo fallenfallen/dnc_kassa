@@ -1,0 +1,116 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>NameOfScheme</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>NameOfScheme</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>379</width>
+            <height>230</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Название схемы</string>
+    </property>
+    <widget class="QGroupBox">
+        <property name="name">
+            <cstring>groupBox3</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>30</x>
+                <y>30</y>
+                <width>320</width>
+                <height>180</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string></string>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>90</x>
+                    <y>20</y>
+                    <width>130</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Введите имя схемы</string>
+            </property>
+        </widget>
+        <widget class="QLineEdit">
+            <property name="name">
+                <cstring>NameSchemeEdit</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>50</x>
+                    <y>40</y>
+                    <width>210</width>
+                    <height>25</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>SaveScheme</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>80</x>
+                    <y>90</y>
+                    <width>150</width>
+                    <height>30</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Сохранить схему</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>CloseScemeName</cstring>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>110</x>
+                    <y>130</y>
+                    <width>96</width>
+                    <height>31</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Close</string>
+            </property>
+        </widget>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>SaveScheme</sender>
+        <signal>clicked()</signal>
+        <receiver>NameOfScheme</receiver>
+        <slot>SaveScheme_clicked()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">namescheme.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">char * NameSch;</variable>
+</variables>
+<slots>
+    <slot>Init()</slot>
+    <slot>SaveScheme_clicked()</slot>
+</slots>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

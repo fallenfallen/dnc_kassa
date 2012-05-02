@@ -1,0 +1,138 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>PrintForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>PrintForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>667</width>
+            <height>473</height>
+        </rect>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>800</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property name="font">
+        <font>
+            <family>Sans Serif</family>
+            <pointsize>10</pointsize>
+        </font>
+    </property>
+    <property name="caption">
+        <string>Печать документа</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="text">
+                <string>Внешний вид документа</string>
+            </property>
+        </widget>
+        <widget class="QTextEdit">
+            <property name="name">
+                <cstring>PrintTextEdit</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>8</pointsize>
+                </font>
+            </property>
+            <property name="focusPolicy">
+                <enum>StrongFocus</enum>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="wordWrap">
+                <enum>WidgetWidth</enum>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout2</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>printPushButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Печать...</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>savePushButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Сохранить...</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>cancelPushButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Отмена</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>cancelPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>PrintForm</receiver>
+        <slot>Cancel()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>printPushButton</tabstop>
+    <tabstop>savePushButton</tabstop>
+    <tabstop>cancelPushButton</tabstop>
+    <tabstop>PrintTextEdit</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">qfile.h</include>
+    <include location="global" impldecl="in declaration">qsimplerichtext.h</include>
+    <include location="global" impldecl="in declaration">qpainter.h</include>
+    <include location="global" impldecl="in declaration">qpaintdevicemetrics.h</include>
+    <include location="global" impldecl="in declaration">qprinter.h</include>
+    <include location="global" impldecl="in declaration">qmime.h</include>
+    <include location="local" impldecl="in implementation">printform.ui.h</include>
+</includes>
+<slots>
+    <slot>Save()</slot>
+    <slot>LoadString( QString html_text )</slot>
+    <slot>Print()</slot>
+    <slot access="private">Cancel()</slot>
+    <slot access="private">keyPressEvent( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

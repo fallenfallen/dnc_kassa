@@ -1,0 +1,247 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>serviceForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>serviceForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>400</width>
+            <height>201</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>400</width>
+            <height>0</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>800</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Сервисы</string>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>reportPushButton</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>378</width>
+                    <height>31</height>
+                </size>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="focusPolicy">
+                <enum>TabFocus</enum>
+            </property>
+            <property name="text">
+                <string>Отчеты ККМ</string>
+            </property>
+            <property name="iconSet">
+                <iconset>1.png</iconset>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>syncPushButton</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>378</width>
+                    <height>31</height>
+                </size>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="focusPolicy">
+                <enum>TabFocus</enum>
+            </property>
+            <property name="text">
+                <string>Синхронизация времени</string>
+            </property>
+            <property name="iconSet">
+                <iconset>2.png</iconset>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>transPushButton</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>378</width>
+                    <height>31</height>
+                </size>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="focusPolicy">
+                <enum>TabFocus</enum>
+            </property>
+            <property name="text">
+                <string>Отчеты продаж</string>
+            </property>
+            <property name="iconSet">
+                <iconset>3.png</iconset>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>waresloadPushButton</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>378</width>
+                    <height>31</height>
+                </size>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="focusPolicy">
+                <enum>TabFocus</enum>
+            </property>
+            <property name="text">
+                <string>Загрузка справочника</string>
+            </property>
+            <property name="iconSet">
+                <iconset>4.png</iconset>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>npasreconciliationPushButton</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>378</width>
+                    <height>31</height>
+                </size>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>14</pointsize>
+                </font>
+            </property>
+            <property name="focusPolicy">
+                <enum>TabFocus</enum>
+            </property>
+            <property name="text">
+                <string>Сверка итогов платежной системы</string>
+            </property>
+            <property name="iconSet">
+                <iconset>5.png</iconset>
+            </property>
+        </widget>
+    </vbox>
+</widget>
+<tabstops>
+    <tabstop>reportPushButton</tabstop>
+    <tabstop>syncPushButton</tabstop>
+    <tabstop>transPushButton</tabstop>
+    <tabstop>waresloadPushButton</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">hwsrv.h</include>
+    <include location="local" impldecl="in declaration">reportform.h</include>
+    <include location="local" impldecl="in declaration">synchronizationform.h</include>
+    <include location="local" impldecl="in declaration">blocktimer.h</include>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="local" impldecl="in declaration">messages.h</include>
+    <include location="local" impldecl="in declaration">handleunload.h</include>
+    <include location="local" impldecl="in implementation">serviceform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">HWSRV *kkmser;</variable>
+    <variable access="public">bool Started;</variable>
+</variables>
+<signals>
+    <signal>ZReport()</signal>
+    <signal>Sync()</signal>
+</signals>
+<slots>
+    <slot>ReceiveZReport()</slot>
+    <slot>ReceiveSync()</slot>
+    <slot>ReportForm()</slot>
+    <slot>SynchronizationForm()</slot>
+    <slot returnType="int">CheckPath( char * path )</slot>
+    <slot>SaleReports()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>ExecForm()</slot>
+    <slot>Error( int er )</slot>
+    <slot>WaresLoad()</slot>
+    <slot>Reconsiliation()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

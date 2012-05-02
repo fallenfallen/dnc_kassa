@@ -1,0 +1,796 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>visualForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>visualForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>800</width>
+            <height>600</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>1</hsizetype>
+            <vsizetype>1</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>800</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>800</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Визуальный подбор товара</string>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>codeTextLabel_2</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>11</y>
+                <width>218</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>218</width>
+                <height>28</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>32767</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="paletteBackgroundColor">
+            <color>
+                <red>169</red>
+                <green>206</green>
+                <blue>255</blue>
+            </color>
+        </property>
+        <property name="font">
+            <font>
+                <bold>1</bold>
+            </font>
+        </property>
+        <property name="frameShape">
+            <enum>StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Raised</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="left"&gt;Поиск по штрих-коду (F3)&lt;/p&gt;</string>
+        </property>
+        <property name="alignment">
+            <set>WordBreak|AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QTable">
+        <column>
+            <property name="text">
+                <string>+</string>
+            </property>
+        </column>
+        <column>
+            <property name="text">
+                <string>Код</string>
+            </property>
+        </column>
+        <column>
+            <property name="text">
+                <string>Наименование</string>
+            </property>
+        </column>
+        <column>
+            <property name="text">
+                <string>Штрих-Код</string>
+            </property>
+        </column>
+        <column>
+            <property name="text">
+                <string>Цена</string>
+            </property>
+        </column>
+        <column>
+            <property name="text">
+                <string>Количество</string>
+            </property>
+        </column>
+        <column>
+            <property name="text">
+                <string>grcode</string>
+            </property>
+        </column>
+        <column>
+            <property name="text">
+                <string>grparcode</string>
+            </property>
+        </column>
+        <column>
+            <property name="text">
+                <string>addition_id</string>
+            </property>
+        </column>
+        <property name="name">
+            <cstring>visualTable</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>95</y>
+                <width>778</width>
+                <height>494</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>778</width>
+                <height>478</height>
+            </size>
+        </property>
+        <property name="palette">
+            <palette>
+                <active>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>244</red>
+                        <green>244</green>
+                        <blue>244</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>249</red>
+                        <green>249</green>
+                        <blue>249</blue>
+                    </color>
+                    <color>
+                        <red>122</red>
+                        <green>122</green>
+                        <blue>122</blue>
+                    </color>
+                    <color>
+                        <red>162</red>
+                        <green>162</green>
+                        <blue>162</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>169</red>
+                        <green>206</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>128</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                </active>
+                <disabled>
+                    <color>
+                        <red>128</red>
+                        <green>128</green>
+                        <blue>128</blue>
+                    </color>
+                    <color>
+                        <red>244</red>
+                        <green>244</green>
+                        <blue>244</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>122</red>
+                        <green>122</green>
+                        <blue>122</blue>
+                    </color>
+                    <color>
+                        <red>162</red>
+                        <green>162</green>
+                        <blue>162</blue>
+                    </color>
+                    <color>
+                        <red>128</red>
+                        <green>128</green>
+                        <blue>128</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>128</red>
+                        <green>128</green>
+                        <blue>128</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>169</red>
+                        <green>206</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>128</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>83</red>
+                        <green>83</green>
+                        <blue>120</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>64</green>
+                        <blue>0</blue>
+                    </color>
+                </disabled>
+                <inactive>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>244</red>
+                        <green>244</green>
+                        <blue>244</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>122</red>
+                        <green>122</green>
+                        <blue>122</blue>
+                    </color>
+                    <color>
+                        <red>162</red>
+                        <green>162</green>
+                        <blue>162</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>169</red>
+                        <green>206</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>128</blue>
+                    </color>
+                    <color>
+                        <red>255</red>
+                        <green>255</green>
+                        <blue>255</blue>
+                    </color>
+                    <color>
+                        <red>83</red>
+                        <green>83</green>
+                        <blue>120</blue>
+                    </color>
+                    <color>
+                        <red>0</red>
+                        <green>64</green>
+                        <blue>0</blue>
+                    </color>
+                </inactive>
+            </palette>
+        </property>
+        <property name="focusPolicy">
+            <enum>NoFocus</enum>
+        </property>
+        <property name="acceptDrops">
+            <bool>false</bool>
+        </property>
+        <property name="resizePolicy">
+            <enum>Default</enum>
+        </property>
+        <property name="vScrollBarMode">
+            <enum>AlwaysOn</enum>
+        </property>
+        <property name="hScrollBarMode">
+            <enum>AlwaysOff</enum>
+        </property>
+        <property name="numRows">
+            <number>0</number>
+        </property>
+        <property name="numCols">
+            <number>9</number>
+        </property>
+        <property name="readOnly">
+            <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+            <enum>SingleRow</enum>
+        </property>
+        <property name="focusStyle">
+            <enum>SpreadSheet</enum>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>messageTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>67</y>
+                <width>778</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>298</width>
+                <height>28</height>
+            </size>
+        </property>
+        <property name="paletteForegroundColor">
+            <color>
+                <red>255</red>
+                <green>0</green>
+                <blue>0</blue>
+            </color>
+        </property>
+        <property name="font">
+            <font>
+                <pointsize>12</pointsize>
+            </font>
+        </property>
+        <property name="frameShape">
+            <enum>NoFrame</enum>
+        </property>
+        <property name="text">
+            <string></string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>titleTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>11</x>
+                <y>39</y>
+                <width>218</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>218</width>
+                <height>28</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>32767</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="paletteBackgroundColor">
+            <color>
+                <red>169</red>
+                <green>206</green>
+                <blue>255</blue>
+            </color>
+        </property>
+        <property name="font">
+            <font>
+                <bold>1</bold>
+            </font>
+        </property>
+        <property name="frameShape">
+            <enum>StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Raised</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="left"&gt;Поиск по названию (F6)&lt;/p&gt;</string>
+        </property>
+        <property name="alignment">
+            <set>WordBreak|AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>codeTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>417</x>
+                <y>11</y>
+                <width>178</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>178</width>
+                <height>28</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>32767</width>
+                <height>30</height>
+            </size>
+        </property>
+        <property name="paletteBackgroundColor">
+            <color>
+                <red>169</red>
+                <green>206</green>
+                <blue>255</blue>
+            </color>
+        </property>
+        <property name="font">
+            <font>
+                <bold>1</bold>
+            </font>
+        </property>
+        <property name="frameShape">
+            <enum>StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Raised</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="left"&gt;Поиск по коду (F2)&lt;/p&gt;</string>
+        </property>
+        <property name="alignment">
+            <set>WordBreak|AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>titleLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>229</x>
+                <y>39</y>
+                <width>188</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="sizePolicy">
+            <sizepolicy>
+                <hsizetype>5</hsizetype>
+                <vsizetype>0</vsizetype>
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>188</width>
+                <height>28</height>
+            </size>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>priceTextLabel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>417</x>
+                <y>39</y>
+                <width>178</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>178</width>
+                <height>28</height>
+            </size>
+        </property>
+        <property name="paletteBackgroundColor">
+            <color>
+                <red>170</red>
+                <green>170</green>
+                <blue>127</blue>
+            </color>
+        </property>
+        <property name="font">
+            <font>
+                <bold>1</bold>
+            </font>
+        </property>
+        <property name="frameShape">
+            <enum>Panel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Raised</enum>
+        </property>
+        <property name="text">
+            <string>Фильтр по цене (F4)</string>
+        </property>
+        <property name="alignment">
+            <set>AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>codeLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>595</x>
+                <y>11</y>
+                <width>194</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>188</width>
+                <height>28</height>
+            </size>
+        </property>
+        <property name="maxLength">
+            <number>10</number>
+        </property>
+        <property name="dragEnabled">
+            <bool>false</bool>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>priceLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>595</x>
+                <y>39</y>
+                <width>194</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>188</width>
+                <height>28</height>
+            </size>
+        </property>
+        <property name="font">
+            <font>
+                <bold>1</bold>
+            </font>
+        </property>
+        <property name="frameShape">
+            <enum>Panel</enum>
+        </property>
+        <property name="frameShadow">
+            <enum>Plain</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p&gt;&lt;/p&gt;</string>
+        </property>
+        <property name="alignment">
+            <set>WordBreak|AlignCenter</set>
+        </property>
+    </widget>
+    <widget class="QLineEdit">
+        <property name="name">
+            <cstring>barcodeLineEdit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>229</x>
+                <y>11</y>
+                <width>188</width>
+                <height>28</height>
+            </rect>
+        </property>
+        <property name="sizePolicy">
+            <sizepolicy>
+                <hsizetype>5</hsizetype>
+                <vsizetype>0</vsizetype>
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>188</width>
+                <height>28</height>
+            </size>
+        </property>
+    </widget>
+</widget>
+<includes>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">reg_pgsql.h</include>
+    <include location="local" impldecl="in declaration">blocktimer.h</include>
+    <include location="global" impldecl="in declaration">qvalidator.h</include>
+    <include location="local" impldecl="in declaration">quantinputform.h</include>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="local" impldecl="in declaration">messages.h</include>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="local" impldecl="in implementation">visualform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">double price_filter;</variable>
+    <variable access="public">int check_type;</variable>
+    <variable access="private">int eraddware;</variable>
+    <variable access="private">QTextCodec * DbCodec;</variable>
+    <variable access="private">QString str;</variable>
+    <variable access="private">QLineEdit *editline;</variable>
+    <variable access="private">QValidator *v;</variable>
+    <variable access="private">QRegExpValidator *codevalidator;</variable>
+    <variable access="private">QTextCodec* DefCodec;</variable>
+    <variable access="private">QRegExpValidator *barcodevalidator;</variable>
+    <variable access="private">QRegExpValidator *titlevalidator;</variable>
+    <variable>double q;</variable>
+    <variable>int sernumber;</variable>
+    <variable access="public">bool vsQttyPreSet;</variable>
+</variables>
+<slots>
+    <slot>setBarcode( QString barcode )</slot>
+    <slot>setWareTitle( QString ware_title )</slot>
+    <slot>setCode( QString code )</slot>
+    <slot>SearchByAll()</slot>
+    <slot>showEvent( QShowEvent * )</slot>
+    <slot>SetBarCodePattern( const char * barcode )</slot>
+    <slot>ClearMessage()</slot>
+    <slot>SetValidatorProperties()</slot>
+    <slot>InitTable()</slot>
+    <slot>AddPixmapInTable( bool pixflag, int i )</slot>
+    <slot>AddRowInTable( const char * name, const char * price, const char * quant, const char * code, const char * barcode, const char * group, const char * pgroup, bool grflag, bool pixflag )</slot>
+    <slot>SetSelectionUp()</slot>
+    <slot>SetSelectionDown()</slot>
+    <slot>ClearVisualTable()</slot>
+    <slot>FillGroup( int n, const char * pgroup )</slot>
+    <slot>FillProd( int n )</slot>
+    <slot>FillTable( const char * group_id )</slot>
+    <slot>InFolder()</slot>
+    <slot>OutFolder()</slot>
+    <slot>ChangeFolder()</slot>
+    <slot>RegistrationGood( QString product_code )</slot>
+    <slot>AddWareError( int er )</slot>
+    <slot>EnterHandler()</slot>
+    <slot>CloseForm()</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+    <slot>Clear()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>Error( int er )</slot>
+    <slot>setPrice( double price )</slot>
+    <slot>RequestPrice()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+    <function returnType="int">RequestQuantity( const char * code )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

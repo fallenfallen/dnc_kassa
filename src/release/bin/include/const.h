@@ -1,0 +1,16 @@
+#ifndef CONST_SYSTEM_CODECS
+#define CONST_SYSTEM_CODECS
+
+#define SYSCODEC "UTF8"
+#define DBCODEC "UTF8"
+#define HWCODEC "CP1251"
+
+#define PROGRAMM_VERSION "ДЭНСИ:КАССА 1.2.6 patch5"
+
+#endif
+
+
+#define DEBLEVEL_REGFORM STDOUT
+#define DEBLEVEL_REPFORM STDOUT
+
+

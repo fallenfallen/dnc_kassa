@@ -1,0 +1,17 @@
+#!/bin/bash
+if [ -x /usr/bin/reshka ]; then 
+    zenity --warning --text="Обнаружена предыдущая установка ДЭНСИ:КАССА\nДля обновления используйте специальный диск, доступный на www.dnc-soft.ru"
+    exit 
+fi
+
+cd /media/cdrom/dnc_kassa/scripts
+
+./setup_dnc | zenity --progress --auto-close
+zenity --text-info --width=640 --height=480 --title="Результаты" --filename=/tmp/dnc_setup.log
+
+eject -r
+
+zenity --warning --text="Нажмите OK для перезагрузки"
+
+reboot
+

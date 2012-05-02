@@ -1,0 +1,9 @@
+
+cp -v hwsighandlerscontroller.h ../../../bin/include
+qmake
+make
+
+cp -v ./libdnchwsigcontroller.so ../../../bin/lib
+
+
+

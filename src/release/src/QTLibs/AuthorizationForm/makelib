@@ -1,0 +1,7 @@
+
+qmake
+make
+cp -v .ui/authorizationform.h ../../../bin/include
+cp -v ./libdncauthform.so ../../../bin/lib
+
+

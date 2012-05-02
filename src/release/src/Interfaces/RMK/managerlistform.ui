@@ -1,0 +1,337 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>managerListForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>managerListForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>427</width>
+            <height>319</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Выберите менеджера-консультанта</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="2" column="0">
+            <property name="name">
+                <cstring>layout16</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QPushButton" row="0" column="1" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>selectButton</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>100</width>
+                            <height>75</height>
+                        </size>
+                    </property>
+                    <property name="paletteForegroundColor">
+                        <color>
+                            <red>0</red>
+                            <green>170</green>
+                            <blue>0</blue>
+                        </color>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>1</bold>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Выбрать</string>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget" row="1" column="0">
+                    <property name="name">
+                        <cstring>layout14</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>exitButton</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>150</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="paletteForegroundColor">
+                                <color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>127</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>Закрыть</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer10</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>71</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>downButton</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>70</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>arrow_down.png</pixmap>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLayoutWidget" row="0" column="0">
+                    <property name="name">
+                        <cstring>layout15</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>cancelButton</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>150</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="paletteForegroundColor">
+                                <color>
+                                    <red>255</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                </color>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string>Отмена</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer9</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>71</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>upButton</cstring>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>70</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <bold>1</bold>
+                                </font>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>arrow_up.png</pixmap>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>layout17</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>tsearchLabel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Поиск (имя):</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>searchLine</cstring>
+                    </property>
+                    <property name="maxLength">
+                        <number>20</number>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QTable" row="1" column="0">
+            <column>
+                <property name="text">
+                    <string>Менеджер</string>
+                </property>
+            </column>
+            <property name="name">
+                <cstring>managersTable</cstring>
+            </property>
+            <property name="numRows">
+                <number>0</number>
+            </property>
+            <property name="numCols">
+                <number>1</number>
+            </property>
+            <property name="readOnly">
+                <bool>true</bool>
+            </property>
+            <property name="sorting">
+                <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+                <enum>SingleRow</enum>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>upButton</sender>
+        <signal>clicked()</signal>
+        <receiver>managerListForm</receiver>
+        <slot>SetSelectionUp()</slot>
+    </connection>
+    <connection>
+        <sender>downButton</sender>
+        <signal>clicked()</signal>
+        <receiver>managerListForm</receiver>
+        <slot>SetSelectionDown()</slot>
+    </connection>
+    <connection>
+        <sender>cancelButton</sender>
+        <signal>clicked()</signal>
+        <receiver>managerListForm</receiver>
+        <slot>Reject()</slot>
+    </connection>
+    <connection>
+        <sender>exitButton</sender>
+        <signal>clicked()</signal>
+        <receiver>managerListForm</receiver>
+        <slot>Close()</slot>
+    </connection>
+    <connection>
+        <sender>selectButton</sender>
+        <signal>clicked()</signal>
+        <receiver>managerListForm</receiver>
+        <slot>EnterHandler()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>searchLine</tabstop>
+    <tabstop>managersTable</tabstop>
+    <tabstop>upButton</tabstop>
+    <tabstop>downButton</tabstop>
+    <tabstop>exitButton</tabstop>
+    <tabstop>cancelButton</tabstop>
+    <tabstop>selectButton</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="local" impldecl="in declaration">blocktimer.h</include>
+    <include location="local" impldecl="in implementation">managerlistform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">QTextCodec* DefCodec;</variable>
+    <variable access="private">QTextCodec* DbCodec;</variable>
+    <variable access="public">int idx;</variable>
+    <variable access="private">int searchtype;</variable>
+</variables>
+<slots>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>SetSelectionUp()</slot>
+    <slot>SetSelectionDown()</slot>
+    <slot>BarcodeEvent( QString barcode_str )</slot>
+    <slot returnType="int">fillTable()</slot>
+    <slot>SearchManager()</slot>
+    <slot>Reject()</slot>
+    <slot>Close()</slot>
+    <slot>EnterHandler()</slot>
+    <slot returnType="QString">GetName()</slot>
+    <slot returnType="QString">GetId()</slot>
+    <slot>BarcodeSignalHandler( const char * barcode )</slot>
+    <slot>CardcodeSignalHandler( const char * cardcode )</slot>
+    <slot>CardcodeEvent( QString cardcode_str )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

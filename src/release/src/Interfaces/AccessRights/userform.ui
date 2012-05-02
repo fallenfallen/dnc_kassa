@@ -1,0 +1,429 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>UserForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>UserForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>463</width>
+            <height>486</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Карточка пользователя</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout8</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel" row="4" column="0">
+                    <property name="name">
+                        <cstring>tcardcodeTextLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>&lt;p align="left"&gt;Магнитная карта&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="1" column="0">
+                    <property name="name">
+                        <cstring>tshortcuTextLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>&lt;p align="left"&gt;Имя для чека&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="6" column="0">
+                    <property name="name">
+                        <cstring>treppasswordTextLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                        <size>
+                            <width>170</width>
+                            <height>32767</height>
+                        </size>
+                    </property>
+                    <property name="text">
+                        <string>&lt;p align="left"&gt;Подтверждение пароля&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <widget class="QComboBox" row="2" column="2">
+                    <property name="name">
+                        <cstring>profileComboBox</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                </widget>
+                <widget class="QLineEdit" row="6" column="2">
+                    <property name="name">
+                        <cstring>reppasswordLineEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="2" column="0">
+                    <property name="name">
+                        <cstring>tprofileTextLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>&lt;p align="left"&gt;Профиль&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit" row="3" column="2">
+                    <property name="name">
+                        <cstring>barcodeLineEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="5" column="0">
+                    <property name="name">
+                        <cstring>tpasswordTextLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>&lt;p align="left"&gt;Пароль&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <spacer row="1" column="1">
+                    <property name="name">
+                        <cstring>spacer2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Maximum</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>21</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <spacer row="2" column="1">
+                    <property name="name">
+                        <cstring>spacer3</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Maximum</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>21</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <spacer row="0" column="1">
+                    <property name="name">
+                        <cstring>spacer1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Maximum</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLabel" row="3" column="0">
+                    <property name="name">
+                        <cstring>tbarcodeTextLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>&lt;p align="left"&gt;Штрих-код&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <spacer row="6" column="1">
+                    <property name="name">
+                        <cstring>spacer7</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Maximum</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>21</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLineEdit" row="4" column="2">
+                    <property name="name">
+                        <cstring>cardcodeLineEdit</cstring>
+                    </property>
+                </widget>
+                <spacer row="5" column="1">
+                    <property name="name">
+                        <cstring>spacer6</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Maximum</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
+                        <cstring>tnameTextLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>&lt;p align="left"&gt;Имя пользователя&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit" row="5" column="2">
+                    <property name="name">
+                        <cstring>passwordLineEdit</cstring>
+                    </property>
+                </widget>
+                <spacer row="4" column="1">
+                    <property name="name">
+                        <cstring>spacer5</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Maximum</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLineEdit" row="0" column="2">
+                    <property name="name">
+                        <cstring>nameLineEdit</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                </widget>
+                <spacer row="3" column="1">
+                    <property name="name">
+                        <cstring>spacer4</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Maximum</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>21</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLineEdit" row="1" column="2">
+                    <property name="name">
+                        <cstring>shortcutLineEdit</cstring>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout4</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>savePushButton</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>Сохранить</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>cancelPushButton</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>Отмена</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<tabstops>
+    <tabstop>nameLineEdit</tabstop>
+    <tabstop>shortcutLineEdit</tabstop>
+    <tabstop>profileComboBox</tabstop>
+    <tabstop>barcodeLineEdit</tabstop>
+    <tabstop>cardcodeLineEdit</tabstop>
+    <tabstop>passwordLineEdit</tabstop>
+    <tabstop>reppasswordLineEdit</tabstop>
+    <tabstop>savePushButton</tabstop>
+    <tabstop>cancelPushButton</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">accessrights.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="local" impldecl="in declaration">hwsrv.h</include>
+    <include location="local" impldecl="in declaration">signal.h</include>
+    <include location="local" impldecl="in declaration">dkbinput.h</include>
+    <include location="local" impldecl="in declaration">bcskbinput.h</include>
+    <include location="local" impldecl="in declaration">mcrkbinput.h</include>
+    <include location="global" impldecl="in declaration">qfocusdata.h</include>
+    <include location="local" impldecl="in declaration">messages.h</include>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="local" impldecl="in implementation">userform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">QTextCodec * dbTextCodec;</variable>
+    <variable access="private">QTextCodec *defTextCodec;</variable>
+    <variable access="private">int *profile_idents;</variable>
+    <variable access="private">int user_id;</variable>
+    <variable access="private">bool edit_flag;</variable>
+    <variable access="private">char *user_name;</variable>
+    <variable access="private">bool new_flag;</variable>
+    <variable access="private">char *profile_name;</variable>
+</variables>
+<slots>
+    <slot>ScanerSignal( const char * barcode )</slot>
+    <slot>ReaderSignal( const char * cardcode )</slot>
+    <slot>ChangePassword()</slot>
+    <slot>InitKeyAccel()</slot>
+    <slot>ChangeFlag()</slot>
+    <slot>InitUserForm()</slot>
+    <slot>GetNewName( char * name )</slot>
+    <slot>GetNewProfile( char * name )</slot>
+    <slot>ShowEditUser( int id )</slot>
+    <slot>DisableNoEdit()</slot>
+    <slot>Cancel()</slot>
+    <slot>Get_User_Info( char * &amp; shortcut, char * &amp; bar_code, char * &amp; card_code, char * &amp; upassword )</slot>
+    <slot>Get_Info_Extra()</slot>
+    <slot>Get_Info( char * &amp; param, QLineEdit * le )</slot>
+    <slot>Save()</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>Error( int er )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+    <function returnType="bool">GetNewFlag()</function>
+    <function returnType="int">GetNewIdent()</function>
+    <function returnType="int">Acknowledgement( QString text )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

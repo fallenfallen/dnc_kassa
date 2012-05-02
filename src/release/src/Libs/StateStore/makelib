@@ -1,0 +1,10 @@
+
+
+g++ -Wno-deprecated -fPIC -c statestore.cpp
+g++ -shared -o libdncstatestore.so statestore.o
+
+
+cp -v statestore.h ../../../bin/include
+cp -v ./libdncstatestore.so ../../../bin/lib
+
+rm *.o

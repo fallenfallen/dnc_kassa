@@ -1,0 +1,10 @@
+rm -f ./*.so
+
+cp -v debug_level_log.h ../../../bin/include 
+
+gcc -fpic -c debug_level_log.cpp
+gcc -shared -WI, -o libdncdllog.so debug_level_log.o
+
+cp -v ./libdncdllog.so ../../../bin/lib
+
+rm *.o

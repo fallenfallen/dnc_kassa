@@ -1,0 +1,85 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>checklistForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>checklistForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>422</width>
+            <height>172</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Выберите чек для возврата или печати копии</string>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QListBox">
+            <property name="name">
+                <cstring>checkListBox</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>400</width>
+                    <height>150</height>
+                </size>
+            </property>
+            <property name="frameShape">
+                <enum>StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Sunken</enum>
+            </property>
+        </widget>
+    </vbox>
+</widget>
+<includes>
+    <include location="global" impldecl="in declaration">qstring.h</include>
+    <include location="global" impldecl="in declaration">qlistbox.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">reg_pgsql.h</include>
+    <include location="local" impldecl="in declaration">trans_pgsql.h</include>
+    <include location="local" impldecl="in declaration">blocktimer.h</include>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="global" impldecl="in declaration">qaccel.h</include>
+    <include location="local" impldecl="in implementation">checklistform.ui.h</include>
+</includes>
+<variables>
+    <variable>char* cash;</variable>
+    <variable>char* check;</variable>
+    <variable access="private">QTextCodec* DefCodec;</variable>
+    <variable access="public">bool fixflag;</variable>
+    <variable>char **checkdatetime;</variable>
+    <variable access="private">int fixed_index;</variable>
+    <variable>char ** n_docs;</variable>
+    <variable>bool putout_fl;</variable>
+</variables>
+<slots>
+    <slot>init()</slot>
+    <slot>InitAccels()</slot>
+    <slot>SetVariables( int check_number, int n_pc, bool putout )</slot>
+    <slot returnType="int">FillForm()</slot>
+    <slot>GetCheckInfo( char * check_num, char * datetime, char * n_doc )</slot>
+    <slot>FixCheck()</slot>
+    <slot>Close()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot returnType="string">GetNPC()</slot>
+    <slot returnType="string">GetCheckNum()</slot>
+    <slot returnType="string">GetDateTime()</slot>
+    <slot returnType="string">GetNDoc()</slot>
+    <slot returnType="string">GetChType()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">destroy()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

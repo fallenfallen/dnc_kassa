@@ -1,0 +1,11 @@
+
+cp -v *.h ../../../bin/include
+
+
+g++ -Wno-deprecated -fpic -c -I/usr/include/pgsql -I../../../bin/include *.cpp
+g++ -shared -WI, -L/usr/lib/pgsql -lpq -o  libdncdbmanager.so  *.o
+
+cp -vf ./*.so ../../../bin/lib
+rm *.o
+
+

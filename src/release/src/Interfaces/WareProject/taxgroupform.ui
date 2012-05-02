@@ -1,0 +1,126 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>TaxGroupform</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>TaxGroupform</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>300</width>
+            <height>420</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>300</width>
+            <height>420</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Изменить налоговую группу</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>layout3</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QPushButton" row="1" column="1">
+                    <property name="name">
+                        <cstring>TaxGroupCansel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Отменить</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="0">
+                    <property name="name">
+                        <cstring>TaxGroupOK</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Применить</string>
+                    </property>
+                </widget>
+                <widget class="QListView" row="0" column="0" rowspan="1" colspan="2">
+                    <column>
+                        <property name="text">
+                            <string>Налоговые группы</string>
+                        </property>
+                        <property name="clickable">
+                            <bool>true</bool>
+                        </property>
+                        <property name="resizable">
+                            <bool>true</bool>
+                        </property>
+                    </column>
+                <item>
+                    <property name="text">
+                        <string>Без группы</string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap></pixmap>
+                    </property>
+                </item>
+                    <property name="name">
+                        <cstring>TaxGroup_listView</cstring>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>TaxGroupOK</sender>
+        <signal>clicked()</signal>
+        <receiver>TaxGroupform</receiver>
+        <slot>TaxGroupOK_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>TaxGroupCansel</sender>
+        <signal>clicked()</signal>
+        <receiver>TaxGroupform</receiver>
+        <slot>TaxGroupCansel_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>TaxGroup_listView</tabstop>
+    <tabstop>TaxGroupOK</tabstop>
+    <tabstop>TaxGroupCansel</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">ware_const.h</include>
+    <include location="local" impldecl="in implementation">taxgroupform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">int Number_Group;</variable>
+    <variable access="private">int t_id;</variable>
+    <variable access="private">bool exit_flag;</variable>
+    <variable access="private">QTextCodec * cp1251Codec;</variable>
+    <variable access="private">QTextCodec * dbaseCodec;</variable>
+    <variable access="private">QTextCodec * systemCodec;</variable>
+</variables>
+<slots>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>TaxGroupCansel_clicked()</slot>
+    <slot>TaxGroupOK_clicked()</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function returnType="int">FillTaxGroupListBox( void )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

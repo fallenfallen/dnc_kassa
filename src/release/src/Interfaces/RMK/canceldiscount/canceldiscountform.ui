@@ -1,0 +1,576 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>canceldiscountForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>canceldiscountForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>515</width>
+            <height>219</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>7</hsizetype>
+            <vsizetype>7</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>0</width>
+            <height>0</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>32767</width>
+            <height>32767</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Отмена скидок/надбавок</string>
+    </property>
+    <property name="focusPolicy">
+        <enum>NoFocus</enum>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLabel" row="2" column="0">
+            <property name="name">
+                <cstring>markfixPixmapLabel</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>30</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="pixmap">
+                <pixmap>star.png</pixmap>
+            </property>
+            <property name="scaledContents">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <spacer row="0" column="0">
+            <property name="name">
+                <cstring>spacer10</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Fixed</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QLabel" row="3" column="0">
+            <property name="name">
+                <cstring>markhandPixmapLabel</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>30</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="pixmap">
+                <pixmap>star.png</pixmap>
+            </property>
+            <property name="scaledContents">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QLabel" row="4" column="0">
+            <property name="name">
+                <cstring>markcardPixmapLabel</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>30</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="pixmap">
+                <pixmap>star.png</pixmap>
+            </property>
+            <property name="scaledContents">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QCheckBox" row="3" column="1">
+            <property name="name">
+                <cstring>handCheckBox</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>330</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="focusPolicy">
+                <enum>NoFocus</enum>
+            </property>
+            <property name="text">
+                <string>Отменить произвольную скидку</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox" row="0" column="1">
+            <property name="name">
+                <cstring>allCheckBox</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>330</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="focusPolicy">
+                <enum>NoFocus</enum>
+            </property>
+            <property name="text">
+                <string>Отменить все</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox" row="2" column="1">
+            <property name="name">
+                <cstring>fixCheckBox</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>330</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="focusPolicy">
+                <enum>NoFocus</enum>
+            </property>
+            <property name="text">
+                <string>Отменить фиксированную скидку</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="1" column="0">
+            <property name="name">
+                <cstring>markautoPixmapLabel</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>30</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="pixmap">
+                <pixmap>star.png</pixmap>
+            </property>
+            <property name="scaledContents">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QCheckBox" row="1" column="1">
+            <property name="name">
+                <cstring>autoCheckBox</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>330</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="focusPolicy">
+                <enum>NoFocus</enum>
+            </property>
+            <property name="text">
+                <string>Отменить автоматическую скидку</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox" row="4" column="1">
+            <property name="name">
+                <cstring>cardCheckBox</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>330</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="focusPolicy">
+                <enum>NoFocus</enum>
+            </property>
+            <property name="text">
+                <string>Отменить скидку по дисконтной карте</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="4" column="2">
+            <property name="name">
+                <cstring>cardTextLabel</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>50</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>0.00</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="1" column="2">
+            <property name="name">
+                <cstring>autoTextLabel</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>20</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>0.00</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="2" column="2">
+            <property name="name">
+                <cstring>fixTextLabel</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>50</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>0.00</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="3" column="2">
+            <property name="name">
+                <cstring>handTextLabel</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>50</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>0.00</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="0" column="2">
+            <property name="name">
+                <cstring>allTextLabel</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>100</width>
+                    <height>20</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>0.00</string>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>autoCheckBox</sender>
+        <signal>clicked()</signal>
+        <receiver>canceldiscountForm</receiver>
+        <slot>autoCheckBox_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>fixCheckBox</sender>
+        <signal>clicked()</signal>
+        <receiver>canceldiscountForm</receiver>
+        <slot>fixCheckBox_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>handCheckBox</sender>
+        <signal>clicked()</signal>
+        <receiver>canceldiscountForm</receiver>
+        <slot>handCheckBox_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>allCheckBox</sender>
+        <signal>clicked()</signal>
+        <receiver>canceldiscountForm</receiver>
+        <slot>allCheckBox_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>fixCheckBox</tabstop>
+    <tabstop>handCheckBox</tabstop>
+    <tabstop>allCheckBox</tabstop>
+    <tabstop>autoCheckBox</tabstop>
+    <tabstop>cardCheckBox</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">receipt.h</include>
+    <include location="local" impldecl="in declaration">blocktimer.h</include>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="local" impldecl="in declaration">function_objects_stl.h</include>
+    <include location="local" impldecl="in declaration">authorization.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="local" impldecl="in implementation">canceldiscountform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">int discount_num;</variable>
+    <variable access="public">bool choose[4];</variable>
+    <variable access="private">int foc;</variable>
+    <variable access="private">bool area_flag;</variable>
+    <variable access="private">int pos_index;</variable>
+    <variable access="private">Receipt * receipt;</variable>
+    <variable access="private">bool was_checked[4];</variable>
+    <variable access="private">discount_map m_discount;</variable>
+    <variable access="private">discount_map m_input_discount;</variable>
+    <variable access="private">checkBox_vector v_chbox;</variable>
+    <variable access="private">textLabel_vector v_tlabel;</variable>
+    <variable access="private">textLabel_vector v_mlabel;</variable>
+    <variable access="private">focus_map m_foc;</variable>
+    <variable access="private">map&lt;int,int&gt; foc_to_ind;</variable>
+    <variable access="private">less_d less_discount;</variable>
+</variables>
+<slots>
+    <slot>ClearStlObjects()</slot>
+    <slot>Markout( int index, const QColor color )</slot>
+    <slot>MarkoutMaxDiscount( int index )</slot>
+    <slot>MarkoutMaxCharge( int index )</slot>
+    <slot>MarkoutMinMax()</slot>
+    <slot>SetTextCharge( int i )</slot>
+    <slot>InitFocus()</slot>
+    <slot>SetFocusUp()</slot>
+    <slot>SetFocusDown()</slot>
+    <slot>CancelOneReduction( int i, bool restore_flag )</slot>
+    <slot>PositionChecked()</slot>
+    <slot>close()</slot>
+    <slot specifier="non virtual">keyPressEvent( QKeyEvent * k )</slot>
+    <slot>autoCheckBox_clicked()</slot>
+    <slot>fixCheckBox_clicked()</slot>
+    <slot>handCheckBox_clicked()</slot>
+    <slot>allCheckBox_clicked()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+    <function returnType="int">GetMaybeDiscounts( Receipt * rec, int i )</function>
+    <function returnType="int">InitDiscountsCheckBoxs()</function>
+    <function returnType="int">getIndex( QCheckBox * w )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

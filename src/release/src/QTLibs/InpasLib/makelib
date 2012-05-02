@@ -1,0 +1,7 @@
+
+qmake
+make
+cp -v ./.ui/npaspayform.h ../../../bin/include
+cp -v ./.ui/npasreconciliationform.h ../../../bin/include
+cp -v ./libdncinpas.so ../../../bin/lib
+

@@ -1,0 +1,12 @@
+
+
+g++ -Wno-deprecated -fpic -c -I/usr/include/pgsql -I ../../../bin/include class_pgsql.cpp accessrights.cpp get_param_pgsql.cpp reg_pgsql.cpp setup_dis_pgsql.cpp setup_pgsql.cpp trans_pgsql.cpp unload_pgsql.cpp upload_pgsql.cpp trans_data.cpp setup_sam_pgsql.cpp setup_doc_pgsql.cpp
+
+g++ -shared -WI, -L/usr/lib/pgsql -lpq -L../../../bin/lib -ldncaddonfunc -ldncdllog -ldncencoding -ldncreadconf -ldncreceipt -ldncsetupparam -o libdncpgsql.so class_pgsql.o accessrights.o get_param_pgsql.o reg_pgsql.o setup_dis_pgsql.o setup_pgsql.o trans_pgsql.o unload_pgsql.o upload_pgsql.o trans_data.o setup_sam_pgsql.o setup_doc_pgsql.o
+
+
+cp -v *.h ../../../bin/include
+cp -v ./libdncpgsql.so ../../../bin/lib
+
+
+rm *.o

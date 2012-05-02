@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset=UTF-8">
+</head>
+<body>
+<P>Продавец: ООО "Дэнси Трейд"</P>
+<P>Адрес: 151191, Москва г, Холодильный пер, д.3, кор.1</P>
+
+<P ALIGN=LEFT> <DENCI_DATE> </P>			<!--Тег DENCI_DATE заменяется на текущую дату -->
+
+<P ALIGN="CENTER"><FONT SIZE="+2" ><B>Товарный чек</B></FONT></P>
+
+<!--Тег DENCI_CHECKTYPE заменяется название типа чека : Продажа или Возврат или Копия чека -->
+<P ALIGN= LEFT> <DENCI_CHECKTYPE> №<DENCI_CHECKNUMBER> от <DENCI_CHECK_DATE> </P> <!--Тег DENCI_CHECK_DATE заменяется на дату формирования чека--> 
+
+<DENCI_CHECKTABLE>	<!--Тег DENCI_CHECKTABLE создает таблицу чека  -->
+	<!--Тег DENCI_CHECKCOLUMN добавляет столбец в таблицу чека.
+		Имеет следующие свойства:
+			caption - заголовок столбца; 
+			width - ширина столбца (можно в процентах от ширины таблицы);
+			value - значение подставляемое в столбец. Доступны следующие столбцы :
+				number - порядковый номер,
+				name - Наименование позиции,
+				count - Количество в позиции,
+				price - цена,
+				sum - сумма позиции,
+				discount_sum - сумма скидки на позицию,
+				tax_group - налоговая группа,
+				tax_sum - сумма налога,
+				result_sum - итоговая сумма со скидкой,
+			Если value пусто или отсутствует, значение поля останется пустым.
+			Значения свойств должны быть указаны в кавычках.
+	-->
+	<DENCI_CHECKCOLUMN caption = "№" value = "number" width = "3%" align = "center">
+	<DENCI_CHECKCOLUMN caption = "Наименование" value = "name" width = "37%" >		
+	<DENCI_CHECKCOLUMN caption = "Количество" value = "count" width = "20%" align = "right">
+	<DENCI_CHECKCOLUMN caption = "Цена" value = "price" width = "20%" align = "right">
+	<DENCI_CHECKCOLUMN caption = "Сумма" value = "sum" width = "20%" align = "right">
+	
+</DENCI_CHECKTABLE>	<!--Тег /DENCI_CHECKTABLE закрывает таблицу чека  -->
+
+<!--Тег DENCI_TOTALSUM заменяется на сумму по всем позициям -->
+<P ALIGN=LEFT> Итого : <DENCI_TOTALSUM> </P>	
+
+<!--Тег DENCI_DISCOUNTSUM заменяется на сумму итоговой скидки (включая все начисленные скидки) -->
+<P ALIGN=LEFT> Скидка : <DENCI_DISCOUNTSUM> </P>	
+
+<!--Тег DENCI_TOTALSUM заменяется на итоговую сумму с учетом скидок -->
+<P ALIGN=LEFT> Получено: <DENCI_CHECKSUM> </P>	
+<!--Тег DENCI_CHECKSUM_INWORDS заменяется на итоговую сумму прописью -->
+<P ALIGN=LEFT> <DENCI_CHECKSUM_INWORDS> </P> 
+
+<!--Тег <DENCI_CASHIER> заменяется на имя кассира -->
+<P>Продавец ______________ /<DENCI_CASHIER>/</P>
+
+</body>
+</html>
+
+<!-- Если сохранить обработанный файл, то комментарии удаляются -->
+

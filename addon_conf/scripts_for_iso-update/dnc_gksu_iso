@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /usr/bin
+if ! gksu --message "Введите пароль администратора" "./dnc_iso-update" ; then 
+zenity --warning --text "Введите правильный пароль администратора" ;
+fi

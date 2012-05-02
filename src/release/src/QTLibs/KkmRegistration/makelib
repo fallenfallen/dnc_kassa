@@ -1,0 +1,6 @@
+rm *.so*
+qmake
+make
+cp -v ./libdnckkmregistration.so ../../../bin/lib
+cp -v ./*.h ../../../bin/include
+

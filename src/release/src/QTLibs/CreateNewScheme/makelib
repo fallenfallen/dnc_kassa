@@ -1,0 +1,7 @@
+
+
+qmake
+make
+cp -v .ui/dialognewscheme.h ../../../bin/include
+cp -v ./libdncdialognewscheme.so ../../../bin/lib
+

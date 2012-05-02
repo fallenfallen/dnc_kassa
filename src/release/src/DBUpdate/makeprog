@@ -1,0 +1,3 @@
+qmake
+make
+cp -vf ./DBUpdate ../../bin/bin/

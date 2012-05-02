@@ -1,0 +1,262 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>InsertParamGroup</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>InsertParamGroup</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>580</width>
+            <height>230</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>580</width>
+            <height>230</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <property name="modal">
+        <bool>false</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="resizeMode">
+            <enum>Minimum</enum>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>layout5</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <spacer row="6" column="1">
+                    <property name="name">
+                        <cstring>spacer4</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>60</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLineEdit" row="5" column="0" rowspan="1" colspan="4">
+                    <property name="name">
+                        <cstring>ParentGroupNameEdit</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="readOnly">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="6" column="2">
+                    <property name="name">
+                        <cstring>OK</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>100</width>
+                            <height>30</height>
+                        </size>
+                    </property>
+                    <property name="text">
+                        <string>Готово</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="0" rowspan="1" colspan="4">
+                    <property name="name">
+                        <cstring>LongtitleLabel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Наименование внутреннее</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="6" column="3">
+                    <property name="name">
+                        <cstring>Exit</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>100</width>
+                            <height>30</height>
+                        </size>
+                    </property>
+                    <property name="text">
+                        <string>Выход</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="4" column="0" rowspan="1" colspan="4">
+                    <property name="name">
+                        <cstring>ParentLabel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Имя родительской группы</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit" row="1" column="0" rowspan="1" colspan="4">
+                    <property name="name">
+                        <cstring>LongtitleEdit</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="maxLength">
+                        <number>100</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit" row="3" column="0" rowspan="1" colspan="4">
+                    <property name="name">
+                        <cstring>ShortcutEdit</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>7</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="maxLength">
+                        <number>100</number>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="6" column="0">
+                    <property name="name">
+                        <cstring>ChangeParent</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>240</width>
+                            <height>30</height>
+                        </size>
+                    </property>
+                    <property name="text">
+                        <string>Изменить родительскую группу</string>
+                    </property>
+                    <property name="flat">
+                        <bool>false</bool>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="2" column="0" rowspan="1" colspan="4">
+                    <property name="name">
+                        <cstring>ShortcutLabel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Наименование внешнее</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>OK</sender>
+        <signal>clicked()</signal>
+        <receiver>InsertParamGroup</receiver>
+        <slot>OK_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Exit</sender>
+        <signal>clicked()</signal>
+        <receiver>InsertParamGroup</receiver>
+        <slot>closeForm()</slot>
+    </connection>
+    <connection>
+        <sender>ChangeParent</sender>
+        <signal>clicked()</signal>
+        <receiver>InsertParamGroup</receiver>
+        <slot>ChangeParent_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>LongtitleEdit</tabstop>
+    <tabstop>ShortcutEdit</tabstop>
+    <tabstop>ParentGroupNameEdit</tabstop>
+    <tabstop>ChangeParent</tabstop>
+    <tabstop>OK</tabstop>
+    <tabstop>Exit</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="global" impldecl="in declaration">qvalidator.h</include>
+    <include location="local" impldecl="in declaration">waregroupform.h</include>
+    <include location="local" impldecl="in declaration">ware_const.h</include>
+    <include location="local" impldecl="in implementation">insertparamgroup.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">WareGroupform * w_g;</variable>
+    <variable access="private">QTextCodec *systemCodec;</variable>
+    <variable access="private">QTextCodec * dbaseCodec;</variable>
+    <variable access="private">QString firstname;</variable>
+    <variable access="private">int TypeForm;</variable>
+    <variable access="private">QValidator * titlevalidator;</variable>
+    <variable access="private">QString p_group_id;</variable>
+    <variable access="private">bool exit_flag;</variable>
+</variables>
+<slots>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>SetValidatorProperties( void )</slot>
+    <slot>GetTypeForm( int Par, QString Longtitle )</slot>
+    <slot>OK_clicked()</slot>
+    <slot>FormCreateWareGroup( void )</slot>
+    <slot>FormEditWareGroup( void )</slot>
+    <slot>ChangeParent_clicked()</slot>
+    <slot>FormCreateTaxGroup( void )</slot>
+    <slot>FormEditTaxGroup( void )</slot>
+    <slot>FormCreateAutoRed( void )</slot>
+    <slot>FormEditAutoRed( void )</slot>
+    <slot>closeForm()</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

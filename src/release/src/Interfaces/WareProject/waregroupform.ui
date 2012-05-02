@@ -1,0 +1,149 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>WareGroupform</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>WareGroupform</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>300</width>
+            <height>425</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>300</width>
+            <height>420</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Изменить группу товаров</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="resizeMode">
+            <enum>Minimum</enum>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>layout5</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QPushButton" row="1" column="0">
+                    <property name="name">
+                        <cstring>WareGroupOK</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Применить</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="1">
+                    <property name="name">
+                        <cstring>WareGroupCansel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Отмена</string>
+                    </property>
+                </widget>
+                <widget class="QListView" row="0" column="0" rowspan="1" colspan="2">
+                    <column>
+                        <property name="text">
+                            <string>Группы товаров</string>
+                        </property>
+                        <property name="clickable">
+                            <bool>true</bool>
+                        </property>
+                        <property name="resizable">
+                            <bool>true</bool>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>id</string>
+                        </property>
+                        <property name="clickable">
+                            <bool>true</bool>
+                        </property>
+                        <property name="resizable">
+                            <bool>true</bool>
+                        </property>
+                    </column>
+                <item>
+                    <property name="text">
+                        <string>Без группы</string>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap></pixmap>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap></pixmap>
+                    </property>
+                </item>
+                    <property name="name">
+                        <cstring>WareGroup_listView</cstring>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>WareGroupOK</sender>
+        <signal>clicked()</signal>
+        <receiver>WareGroupform</receiver>
+        <slot>WareGroupOK_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>WareGroupCansel</sender>
+        <signal>clicked()</signal>
+        <receiver>WareGroupform</receiver>
+        <slot>WareGroupCansel_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>WareGroup_listView</tabstop>
+    <tabstop>WareGroupOK</tabstop>
+    <tabstop>WareGroupCansel</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="global" impldecl="in declaration">qinputdialog.h</include>
+    <include location="local" impldecl="in declaration">ware_const.h</include>
+    <include location="local" impldecl="in implementation">waregroupform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">int Number_Group;</variable>
+    <variable access="private">int g_id;</variable>
+    <variable access="private">bool exit_flag;</variable>
+    <variable access="private">QTextCodec * dbaseCodec;</variable>
+    <variable access="private">QTextCodec * systemCodec;</variable>
+    <variable access="private">int group_count;</variable>
+</variables>
+<slots>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>FillWaresGroupListBox()</slot>
+    <slot>WareGroupOK_clicked()</slot>
+    <slot>WareGroupCansel_clicked()</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function returnType="int">ShowNextLevel( QListViewItem * plvItem )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

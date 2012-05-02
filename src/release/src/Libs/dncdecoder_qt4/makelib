@@ -1,0 +1,10 @@
+rm -vf ./build/Release/GNU-Linux-x86/*
+rm -vf ./dist/Release/GNU-Linux-x86/*
+
+cp -vf ./*.h ../../../bin/include
+
+$1 ./nbproject/qt-Release.pro
+make
+
+cp -vfL ./dist/Release/GNU-Linux-x86/*so.1.0.0 ../../../bin/lib
+ln -s ./libdncdecoder_qt4.so.1.0.0 ../../../bin/lib/libdncdecoder_qt4.so

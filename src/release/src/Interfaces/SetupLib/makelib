@@ -1,0 +1,11 @@
+
+rm -f libdncsetup.so*
+
+qmake
+make
+
+cp -v ./libdncsetup.so ../../../bin/lib
+cp -v ./.ui/*.h ../../../bin/include
+cp -v ./*.h ../../../bin/include
+
+

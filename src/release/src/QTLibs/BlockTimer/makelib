@@ -1,0 +1,7 @@
+cp -v blocktimer.h ../../../bin/include
+qmake
+make
+cp -v ./libdncblocktimer.so ../../../bin/lib
+
+
+

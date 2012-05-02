@@ -1,0 +1,1275 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>AddWareform</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>AddWareform</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>792</width>
+            <height>615</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>0</width>
+            <height>0</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>32767</width>
+            <height>32767</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Карточка товара</string>
+    </property>
+    <property name="focusPolicy">
+        <enum>NoFocus</enum>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QGroupBox" row="0" column="0">
+            <property name="name">
+                <cstring>groupBox4</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>5</hsizetype>
+                    <vsizetype>5</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>0</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&lt;p align="center"&gt;&lt;font size="+1"&gt;Карточка товара&lt;/font&gt;&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget" row="2" column="0">
+                    <property name="name">
+                        <cstring>layout64</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>Clear_pushButton</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>30</height>
+                                </size>
+                            </property>
+                            <property name="text">
+                                <string>Очистить поля</string>
+                            </property>
+                        </widget>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>OK</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>30</height>
+                                </size>
+                            </property>
+                            <property name="text">
+                                <string>Добавить товар</string>
+                            </property>
+                        </widget>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>Cansel_pushButton</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>200</width>
+                                    <height>30</height>
+                                </size>
+                            </property>
+                            <property name="text">
+                                <string>Выход</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QToolBox" row="1" column="0">
+                    <property name="name">
+                        <cstring>toolBox3</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="focusPolicy">
+                        <enum>WheelFocus</enum>
+                    </property>
+                    <property name="currentIndex">
+                        <number>0</number>
+                    </property>
+                    <widget class="QWidget">
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="backgroundMode">
+                            <enum>PaletteBackground</enum>
+                        </property>
+                        <attribute name="label">
+                            <string>Основные характеристики товара</string>
+                        </attribute>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="2" column="0">
+                                <property name="name">
+                                    <cstring>Name_textLabel_2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Внутренний код*</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="6" column="1" rowspan="1" colspan="3">
+                                <property name="name">
+                                    <cstring>MinPrice_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="10" column="0">
+                                <property name="name">
+                                    <cstring>AutoScheme_textLabel</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Схема автоматической скидки</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="3" column="0">
+                                <property name="name">
+                                    <cstring>Name_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Наименование товара*</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="7" column="0">
+                                <property name="name">
+                                    <cstring>Quantity_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Количество*</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="8" column="0">
+                                <property name="name">
+                                    <cstring>SaleQuantity_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Минимальное количество для продажи</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>WordBreak|AlignVCenter</set>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="11" column="3">
+                                <property name="name">
+                                    <cstring>WareGroup_pushButton</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Изменить</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="7" column="1" rowspan="1" colspan="3">
+                                <property name="name">
+                                    <cstring>Quantity_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="11" column="1" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>Group_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="focusPolicy">
+                                    <enum>StrongFocus</enum>
+                                </property>
+                                <property name="readOnly">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="11" column="0">
+                                <property name="name">
+                                    <cstring>WareGroup_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Группа товаров</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="10" column="3">
+                                <property name="name">
+                                    <cstring>AutoScheme_pushButton</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Изменить</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="2" column="1" rowspan="1" colspan="3">
+                                <property name="name">
+                                    <cstring>Code_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="maxLength">
+                                    <number>20</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="4" column="0">
+                                <property name="name">
+                                    <cstring>NameForCheck_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Текст для чека</string>
+                                </property>
+                            </widget>
+                            <widget class="DedicationComboBox" row="1" column="1" rowspan="1" colspan="3">
+                                <property name="name">
+                                    <cstring>GeneralBarcode_comboBox</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="4" column="1" rowspan="1" colspan="3">
+                                <property name="name">
+                                    <cstring>NameForCheck_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" row="12" column="3">
+                                <property name="name">
+                                    <cstring>TaxGroup_pushButton</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Изменить</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="10" column="1" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>AutoScheme_lineEdit</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="focusPolicy">
+                                    <enum>StrongFocus</enum>
+                                </property>
+                                <property name="readOnly">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="12" column="0">
+                                <property name="name">
+                                    <cstring>TaxGroup_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Налоговая группа</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="5" column="0">
+                                <property name="name">
+                                    <cstring>Price_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Цена*</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>BarCode_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Штрих-коды</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="9" column="0">
+                                <property name="name">
+                                    <cstring>BestBefore_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Срок годности</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="12" column="1" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>TaxGroup_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="focusPolicy">
+                                    <enum>StrongFocus</enum>
+                                </property>
+                                <property name="readOnly">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            
+                            
+                            
+                            <widget class="QLabel" row="13" column="0">
+                                <property name="name">
+                                    <cstring>Section_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Номер секции</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="13" column="1">
+                        	<property name="name">
+                                    <cstring>Section_spinBox</cstring>
+                                </property>
+                            </widget>
+                            <spacer row="13" column="2">
+                                <property name="name">
+                                    <cstring>section_spacer</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>317</width>
+                                        <height>22</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                                        
+                                                        
+                            <widget class="QLineEdit" row="5" column="1" rowspan="1" colspan="3">
+                                <property name="name">
+                                    <cstring>Price_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel1_2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Основной штрих-код</string>
+                                </property>
+                            </widget>
+                            <spacer row="9" column="2" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>spacer28</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>317</width>
+                                        <height>22</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QDateEdit" row="9" column="1">
+                                <property name="name">
+                                    <cstring>BestBefore_dateEdit</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                                <property name="date">
+                                    <date>
+                                        <year>2000</year>
+                                        <month>1</month>
+                                        <day>1</day>
+                                    </date>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="3" column="1" rowspan="1" colspan="3">
+                                <property name="name">
+                                    <cstring>Name_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="6" column="0">
+                                <property name="name">
+                                    <cstring>MinPrice_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Минимальная цена</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="8" column="1" rowspan="1" colspan="3">
+                                <property name="name">
+                                    <cstring>SaleQuantity_lineEdit</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QTable" row="0" column="1" rowspan="1" colspan="3">
+                                <column>
+                                    <property name="text">
+                                        <string>Штрих-код                   </string>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property name="text">
+                                        <string>Коэффициент</string>
+                                    </property>
+                                </column>
+                                <property name="name">
+                                    <cstring>Barcode_table</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>350</width>
+                                        <height>70</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>32767</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="focusPolicy">
+                                    <enum>WheelFocus</enum>
+                                </property>
+                                <property name="midLineWidth">
+                                    <number>0</number>
+                                </property>
+                                <property name="numRows">
+                                    <number>1</number>
+                                </property>
+                                <property name="numCols">
+                                    <number>2</number>
+                                </property>
+                                <property name="readOnly">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="selectionMode">
+                                    <enum>SingleRow</enum>
+                                </property>
+                                <property name="focusStyle">
+                                    <enum>FollowStyle</enum>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QWidget">
+                        <property name="name">
+                            <cstring>page2</cstring>
+                        </property>
+                        <property name="backgroundMode">
+                            <enum>PaletteBackground</enum>
+                        </property>
+                        <attribute name="label">
+                            <string>Дополнительные характеристики товара</string>
+                        </attribute>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <spacer row="9" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>spacer27</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>22</width>
+                                        <height>54</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>WeightQuantity_textLabel2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Дробное количество (весовой)</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="0" column="1">
+                                <property name="name">
+                                    <cstring>WeightQuantity_comboBox</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>Sale_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Продажа</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>Sale_comboBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="2" column="0">
+                                <property name="name">
+                                    <cstring>Return_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Возврат</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="2" column="1">
+                                <property name="name">
+                                    <cstring>Return_comboBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="3" column="0">
+                                <property name="name">
+                                    <cstring>NegativeReminder_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Отрицательные остатки</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="3" column="1">
+                                <property name="name">
+                                    <cstring>NegativeReminder_comboBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="4" column="0">
+                                <property name="name">
+                                    <cstring>WithoutBringingInQuantity_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Без ввода количества</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="4" column="1">
+                                <property name="name">
+                                    <cstring>WithoutBringingInQuantity_comboBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="5" column="0">
+                                <property name="name">
+                                    <cstring>WritingOffReminder_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Списание остатков</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="5" column="1">
+                                <property name="name">
+                                    <cstring>WritingOffReminder_comboBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="6" column="0">
+                                <property name="name">
+                                    <cstring>EditingPrice_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Редактирование цены</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="6" column="1">
+                                <property name="name">
+                                    <cstring>EditingPrice_comboBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="7" column="0">
+                                <property name="name">
+                                    <cstring>BringingInQuantityByHand_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Ввод количества вручную</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="7" column="1">
+                                <property name="name">
+                                    <cstring>BringingInQuantityByHand_comboBox</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="8" column="0">
+                                <property name="name">
+                                    <cstring>PrintInCheck_textLabel</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Печать в чеке</string>
+                                </property>
+                            </widget>
+                            <widget class="QComboBox" row="8" column="1">
+                                <property name="name">
+                                    <cstring>PrintInCheck_comboBox</cstring>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>WareGroup_pushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AddWareform</receiver>
+        <slot>WareGroup_pushButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>TaxGroup_pushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AddWareform</receiver>
+        <slot>TaxGroup_pushButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Clear_pushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AddWareform</receiver>
+        <slot>Clear_pushButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Cansel_pushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AddWareform</receiver>
+        <slot>Cansel_pushButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>Barcode_table</sender>
+        <signal>valueChanged(int,int)</signal>
+        <receiver>AddWareform</receiver>
+        <slot>Barcode_table_valueChanged(int,int)</slot>
+    </connection>
+    <connection>
+        <sender>OK</sender>
+        <signal>clicked()</signal>
+        <receiver>AddWareform</receiver>
+        <slot>OK_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>AutoScheme_pushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AddWareform</receiver>
+        <slot>AutoScheme_pushButton_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>toolBox3</tabstop>
+    <tabstop>Barcode_table</tabstop>
+    <tabstop>GeneralBarcode_comboBox</tabstop>
+    <tabstop>Code_lineEdit</tabstop>
+    <tabstop>Name_lineEdit</tabstop>
+    <tabstop>NameForCheck_lineEdit</tabstop>
+    <tabstop>Price_lineEdit</tabstop>
+    <tabstop>MinPrice_lineEdit</tabstop>
+    <tabstop>Quantity_lineEdit</tabstop>
+    <tabstop>SaleQuantity_lineEdit</tabstop>
+    <tabstop>BestBefore_dateEdit</tabstop>
+    <tabstop>AutoScheme_lineEdit</tabstop>
+    <tabstop>AutoScheme_pushButton</tabstop>
+    <tabstop>Group_lineEdit</tabstop>
+    <tabstop>WareGroup_pushButton</tabstop>
+    <tabstop>TaxGroup_lineEdit</tabstop>
+    <tabstop>TaxGroup_pushButton</tabstop>
+    <tabstop>Clear_pushButton</tabstop>
+    <tabstop>OK</tabstop>
+    <tabstop>Cansel_pushButton</tabstop>
+    <tabstop>EditingPrice_comboBox</tabstop>
+    <tabstop>NegativeReminder_comboBox</tabstop>
+    <tabstop>WeightQuantity_comboBox</tabstop>
+    <tabstop>WritingOffReminder_comboBox</tabstop>
+    <tabstop>BringingInQuantityByHand_comboBox</tabstop>
+    <tabstop>Sale_comboBox</tabstop>
+    <tabstop>Return_comboBox</tabstop>
+    <tabstop>PrintInCheck_comboBox</tabstop>
+    <tabstop>WithoutBringingInQuantity_comboBox</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">qvalidator.h</include>
+    <include location="local" impldecl="in declaration">setup_param.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="local" impldecl="in declaration">waregroupform.h</include>
+    <include location="global" impldecl="in declaration">qdatetime.h</include>
+    <include location="local" impldecl="in declaration">taxgroupform.h</include>
+    <include location="local" impldecl="in declaration">autoschemeform.h</include>
+    <include location="local" impldecl="in declaration">addwareform.h</include>
+    <include location="local" impldecl="in declaration">ware_const.h</include>
+    <include location="local" impldecl="in implementation">addwareform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">Autoschemeform * a_f;</variable>
+    <variable>QDate BestBefore;</variable>
+    <variable access="private">QValidator *pricevalidator;</variable>
+    <variable access="private">QValidator *titlevalidator;</variable>
+    <variable access="private">QValidator *quantityvalidator;</variable>
+    <variable access="public">WareGroupform * w_g;</variable>
+    <variable access="private">QValidator *schemevalidator;</variable>
+    <variable access="public">TaxGroupform * t_g;</variable>
+    <variable>QString BestBeforeStr;</variable>
+    <variable access="private">QTextCodec * systemCodec;</variable>
+    <variable access="private">QTextCodec * dbaseCodec;</variable>
+    <variable access="private">QTextCodec * cp1251Codec;</variable>
+    <variable access="private">bool exit_flag;</variable>
+    <variable access="private">QString WareGroupName;</variable>
+    <variable access="private">int Param;</variable>
+    <variable access="private">QValidator * codevalidator;</variable>
+</variables>
+<slots>
+    <slot>AddComboBoxes()</slot>
+    <slot>SetTabOrderafterCreateComboBox()</slot>
+    <slot>InitTable()</slot>
+    <slot>Myinit( int par )</slot>
+    <slot>ScanerSignal( const char * barcode )</slot>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>LoadInfoAboutWare( void )</slot>
+    <slot>LoadFlags( char * str )</slot>
+    <slot>SetValidatorProperties( void )</slot>
+    <slot>OK_clicked( void )</slot>
+    <slot>AutoScheme_pushButton_clicked()</slot>
+    <slot>WareGroup_pushButton_clicked( void )</slot>
+    <slot>TaxGroup_pushButton_clicked()</slot>
+    <slot>Clear_pushButton_clicked()</slot>
+    <slot>Cansel_pushButton_clicked()</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+    <slot>AddRowInTable()</slot>
+    <slot>AddRow()</slot>
+    <slot>InsertBarcodeComboBox()</slot>
+    <slot>Barcode_table_valueChanged( int row, int col )</slot>
+    <slot>ShowError()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function returnType="int">Contingencies( void )</function>
+    <function returnType="QString">transformationflags( char * param )</function>
+    <function returnType="QString">SaveFlags( char * param )</function>
+    <function returnType="QString">best_before( void )</function>
+    <function returnType="int">CheckExistingBarCode( QString BarCode, QString Koef )</function>
+    <function returnType="int">check_sym_koef_into_barcode( QString sym, QString koef )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>dedicationcombobox.h</includehint>
+</includehints>
+</UI>

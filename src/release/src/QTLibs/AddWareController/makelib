@@ -1,0 +1,9 @@
+
+
+
+cp -v addwarecontroller.h ../../../bin/include
+qmake
+make
+cp -v ./libdncaddwarecontroller.so ../../../bin/lib
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>EWTest</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>EWTest</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>510</width>
+            <height>319</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>0</width>
+            <height>0</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>32767</width>
+            <height>32767</height>
+        </size>
+    </property>
+    <property name="baseSize">
+        <size>
+            <width>0</width>
+            <height>0</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Тест электронных весов</string>
+    </property>
+    <property name="modal">
+        <bool>true</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QPushButton" row="2" column="0">
+            <property name="name">
+                <cstring>FinishButton</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>0</width>
+                    <height>50</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Завершить тест</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="0" column="0">
+            <property name="name">
+                <cstring>textLabel2</cstring>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>32767</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>&lt;p align="center"&gt;&lt;/p&gt;</string>
+            </property>
+        </widget>
+        <widget class="QLCDNumber" row="1" column="0">
+            <property name="name">
+                <cstring>WeightLabel</cstring>
+            </property>
+            <property name="numDigits">
+                <number>9</number>
+            </property>
+            <property name="segmentStyle">
+                <enum>Filled</enum>
+            </property>
+            <property name="value" stdset="0">
+                <number>0</number>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<includes>
+    <include location="local" impldecl="in implementation">ewtest.ui.h</include>
+</includes>
+<slots>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>ShowWeight( void )</slot>
+    <slot>StartTest( int Type, int LogNum, int Port, int BaudRate, int Model )</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

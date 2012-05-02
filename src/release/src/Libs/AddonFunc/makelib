@@ -1,0 +1,9 @@
+rm -f *.so
+
+g++ -Wno-deprecated -fpic -c addon_func.cpp
+g++ -shared -WI, -o libdncaddonfunc.so addon_func.o
+
+cp -v addon_func.h ../../../bin/include
+cp -v libdncaddonfunc.so ../../../bin/lib
+
+rm *.o

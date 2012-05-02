@@ -1,0 +1,86 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>promptingForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>promptingForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>750</width>
+            <height>600</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>750</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>32767</width>
+            <height>32767</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Подсказка по действующим клавишам</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QTable" row="0" column="0">
+            <column>
+                <property name="text">
+                    <string>Клавиши</string>
+                </property>
+            </column>
+            <column>
+                <property name="text">
+                    <string>Действие</string>
+                </property>
+            </column>
+            <property name="name">
+                <cstring>PrompTable</cstring>
+            </property>
+            <property name="hScrollBarMode">
+                <enum>Auto</enum>
+            </property>
+            <property name="numRows">
+                <number>0</number>
+            </property>
+            <property name="numCols">
+                <number>2</number>
+            </property>
+            <property name="selectionMode">
+                <enum>SingleRow</enum>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<includes>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="local" impldecl="in implementation">promptingform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">int current_action;</variable>
+    <variable access="private">int count_action;</variable>
+    <variable access="private">QTextCodec *DefCodec;</variable>
+</variables>
+<slots>
+    <slot>initTable()</slot>
+    <slot>addPosition( QString button, QString action )</slot>
+    <slot>insertValueInTable()</slot>
+    <slot>Down( void )</slot>
+    <slot>Up( void )</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

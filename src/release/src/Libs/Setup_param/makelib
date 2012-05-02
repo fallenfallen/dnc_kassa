@@ -1,0 +1,9 @@
+
+
+g++ -Wno-deprecated -fpic -c -I/usr/include/pgsql -I ../../../bin/include setup_param.cpp
+g++ -shared -WI, -L../../../bin/lib -ldncwaresystem -ldncreadconf -o libdncsetupparam.so setup_param.o
+
+cp -v setup_param.h ../../../bin/include
+cp -v ./libdncsetupparam.so ../../../bin/lib
+
+rm *.o

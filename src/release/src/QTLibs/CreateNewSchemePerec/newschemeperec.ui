@@ -1,0 +1,150 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>NewSchemePerec</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>NewSchemePerec</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>415</width>
+            <height>130</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Введите пожалуйста название для новой схемы перекодировок</string>
+    </property>
+    <property name="focusPolicy">
+        <enum>NoFocus</enum>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <property name="modal">
+        <bool>false</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="resizeMode">
+            <enum>Fixed</enum>
+        </property>
+        <widget class="QGroupBox" row="0" column="0">
+            <property name="name">
+                <cstring>groupBox1</cstring>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget" row="0" column="0">
+                    <property name="name">
+                        <cstring>layout3</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel1</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Название новой перекодировки:</string>
+                            </property>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>newname_lineEdit</cstring>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="QLayoutWidget" row="1" column="0">
+                    <property name="name">
+                        <cstring>layout2</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer3</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>210</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>ok_pushButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>OK</string>
+                            </property>
+                        </widget>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>cansel_pushButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Cansel</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>cansel_pushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>NewSchemePerec</receiver>
+        <slot>cansel_pushButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>ok_pushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>NewSchemePerec</receiver>
+        <slot>ok_pushButton_clicked()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="global" impldecl="in declaration">qvalidator.h</include>
+    <include location="local" impldecl="in declaration">const.h</include>
+    <include location="local" impldecl="in implementation">newschemeperec.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">QTextCodec * DefCodec;</variable>
+</variables>
+<slots>
+    <slot>ok_pushButton_clicked()</slot>
+    <slot>cansel_pushButton_clicked()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>setNewSchemeName( char * sname )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+    <function returnType="QString">getSchemeName()</function>
+</functions>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -1,0 +1,125 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>WareAdditionForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>WareAdditionForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>786</width>
+            <height>347</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Регистрация по дополнительным характеристикам</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>warenameLabel</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <pointsize>12</pointsize>
+                    <bold>1</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string>Название товара</string>
+            </property>
+            <property name="alignment">
+                <set>AlignCenter</set>
+            </property>
+        </widget>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>textLabel1</cstring>
+            </property>
+            <property name="text">
+                <string>Для регистрации выберите товар из списка</string>
+            </property>
+        </widget>
+        <widget class="QTable">
+            <column>
+                <property name="text">
+                    <string>id</string>
+                </property>
+            </column>
+            <column>
+                <property name="text">
+                    <string>Артикул</string>
+                </property>
+            </column>
+            <column>
+                <property name="text">
+                    <string>Штрих код</string>
+                </property>
+            </column>
+            <column>
+                <property name="text">
+                    <string>Цена</string>
+                </property>
+            </column>
+            <column>
+                <property name="text">
+                    <string>Количество</string>
+                </property>
+            </column>
+            <property name="name">
+                <cstring>table</cstring>
+            </property>
+            <property name="focusPolicy">
+                <enum>StrongFocus</enum>
+            </property>
+            <property name="numRows">
+                <number>0</number>
+            </property>
+            <property name="numCols">
+                <number>5</number>
+            </property>
+            <property name="readOnly">
+                <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+                <enum>SingleRow</enum>
+            </property>
+            <property name="focusStyle">
+                <enum>FollowStyle</enum>
+            </property>
+        </widget>
+    </vbox>
+</widget>
+<includes>
+    <include location="global" impldecl="in declaration">qstring.h</include>
+    <include location="global" impldecl="in declaration">iostream</include>
+    <include location="global" impldecl="in declaration">string</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="local" impldecl="in declaration">Ware.h</include>
+    <include location="local" impldecl="in declaration">Error.h</include>
+    <include location="local" impldecl="in declaration">receipt.h</include>
+    <include location="local" impldecl="in implementation">wareaddition_form.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">QString ware_code;</variable>
+    <variable access="private">QString ware_reg_barcode;</variable>
+</variables>
+<slots>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+    <function returnType="int">setWare( Ware * ware )</function>
+    <function returnType="QString">getAdditionId()</function>
+    <function returnType="QString">getAdditionText( int row )</function>
+    <function>setWareRegBarcode( const QString &amp; barcode )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

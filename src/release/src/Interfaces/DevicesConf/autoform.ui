@@ -1,0 +1,693 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>AutoForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>AutoForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>511</width>
+            <height>413</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Автоматическое определение суффиксов и префиксов</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="resizeMode">
+            <enum>Fixed</enum>
+        </property>
+        <widget class="QGroupBox" row="0" column="0">
+            <property name="name">
+                <cstring>groupBox11</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QWidgetStack" row="0" column="0">
+                    <property name="name">
+                        <cstring>widgetStack1</cstring>
+                    </property>
+                    <widget class="QWidget">
+                        <property name="name">
+                            <cstring>InputPage</cstring>
+                        </property>
+                        <attribute name="id">
+                            <number>0</number>
+                        </attribute>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLayoutWidget" row="0" column="0">
+                                <property name="name">
+                                    <cstring>layout94</cstring>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QPushButton" row="2" column="2">
+                                        <property name="name">
+                                            <cstring>Nextbutton</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>120</width>
+                                                <height>40</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Далее</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>ClearBarCodeLineEdit_Button</cstring>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>120</width>
+                                                <height>40</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Очистить</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QGroupBox" row="0" column="0" rowspan="1" colspan="3">
+                                        <property name="name">
+                                            <cstring>groupBox2</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string>Введите штрих-код с клавиатуры</string>
+                                        </property>
+                                        <widget class="QLineEdit">
+                                            <property name="name">
+                                                <cstring>BarCodeFromUserlineEdit</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>10</x>
+                                                    <y>20</y>
+                                                    <width>200</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                    <spacer row="1" column="0">
+                                        <property name="name">
+                                            <cstring>spacer57</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>220</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <spacer row="1" column="2">
+                                        <property name="name">
+                                            <cstring>spacer66</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>220</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <spacer row="2" column="1">
+                                        <property name="name">
+                                            <cstring>spacer143</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>220</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </grid>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QWidget">
+                        <property name="name">
+                            <cstring>ScanPage</cstring>
+                        </property>
+                        <attribute name="id">
+                            <number>1</number>
+                        </attribute>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLayoutWidget" row="0" column="0">
+                                <property name="name">
+                                    <cstring>layout56</cstring>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>layout55</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QPushButton">
+                                                <property name="name">
+                                                    <cstring>ReturnButton2</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>1</hsizetype>
+                                                        <vsizetype>0</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>120</width>
+                                                        <height>40</height>
+                                                    </size>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Назад</string>
+                                                </property>
+                                            </widget>
+                                            <spacer>
+                                                <property name="name">
+                                                    <cstring>spacer57_2</cstring>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Horizontal</enum>
+                                                </property>
+                                                <property name="sizeType">
+                                                    <enum>Expanding</enum>
+                                                </property>
+                                                <property name="sizeHint">
+                                                    <size>
+                                                        <width>240</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                            <widget class="QPushButton">
+                                                <property name="name">
+                                                    <cstring>CanselButton</cstring>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>120</width>
+                                                        <height>40</height>
+                                                    </size>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Отмена</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel6</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>&lt;p align="center"&gt;&lt;font size="+1"&gt;&lt;b&gt;Просканируйте, пожалуйста, введенный ранее  штрих-код!&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QWidget">
+                        <property name="name">
+                            <cstring>ResultPage</cstring>
+                        </property>
+                        <attribute name="id">
+                            <number>2</number>
+                        </attribute>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLayoutWidget" row="0" column="0">
+                                <property name="name">
+                                    <cstring>layout5</cstring>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <spacer row="5" column="2">
+                                        <property name="name">
+                                            <cstring>spacer66_2</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <spacer row="3" column="2">
+                                        <property name="name">
+                                            <cstring>spacer225</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <widget class="QPushButton" row="6" column="0">
+                                        <property name="name">
+                                            <cstring>Returnbutton</cstring>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>120</width>
+                                                <height>40</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Назад</string>
+                                        </property>
+                                    </widget>
+                                    <spacer row="6" column="3">
+                                        <property name="name">
+                                            <cstring>spacer53</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>100</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <spacer row="6" column="1">
+                                        <property name="name">
+                                            <cstring>spacer140</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>100</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <widget class="QGroupBox" row="0" column="0" rowspan="1" colspan="5">
+                                        <property name="name">
+                                            <cstring>groupBox6</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string></string>
+                                        </property>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>textLabel2</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>10</x>
+                                                    <y>10</y>
+                                                    <width>93</width>
+                                                    <height>39</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>&lt;b&gt;Введенный штрих-код:&lt;/b&gt;</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>BarCodeFromScanner</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>160</x>
+                                                    <y>10</y>
+                                                    <width>270</width>
+                                                    <height>23</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                    <widget class="QPushButton" row="6" column="4">
+                                        <property name="name">
+                                            <cstring>Nextbutton_2</cstring>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>120</width>
+                                                <height>40</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Выход</string>
+                                        </property>
+                                    </widget>
+                                    <spacer row="1" column="2">
+                                        <property name="name">
+                                            <cstring>spacer226</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <widget class="QGroupBox" row="4" column="0" rowspan="1" colspan="5">
+                                        <property name="name">
+                                            <cstring>groupBox12</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string></string>
+                                        </property>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>textLabel2_2</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>10</x>
+                                                    <y>10</y>
+                                                    <width>80</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>Префикс 1</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>textLabel3_2</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>10</x>
+                                                    <y>50</y>
+                                                    <width>74</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>Префикс 2</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit">
+                                            <property name="name">
+                                                <cstring>AutoPref1</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>90</x>
+                                                    <y>10</y>
+                                                    <width>70</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit">
+                                            <property name="name">
+                                                <cstring>AutoPref2</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>90</x>
+                                                    <y>50</y>
+                                                    <width>70</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit">
+                                            <property name="name">
+                                                <cstring>AutoSuf1</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>300</x>
+                                                    <y>10</y>
+                                                    <width>80</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>textLabel4_2</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>210</x>
+                                                    <y>10</y>
+                                                    <width>80</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>Суффикс 1</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>textLabel5_2</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>210</x>
+                                                    <y>50</y>
+                                                    <width>77</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>Суффикс 2</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit">
+                                            <property name="name">
+                                                <cstring>AutoSuf2</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>300</x>
+                                                    <y>50</y>
+                                                    <width>80</width>
+                                                    <height>26</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                    <widget class="QPushButton" row="6" column="2">
+                                        <property name="name">
+                                            <cstring>Save_to_main_form</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>120</width>
+                                                <height>40</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Сохранить</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QGroupBox" row="2" column="0" rowspan="1" colspan="5">
+                                        <property name="name">
+                                            <cstring>groupBox5</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string></string>
+                                        </property>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>textLabel1</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>10</x>
+                                                    <y>10</y>
+                                                    <width>102</width>
+                                                    <height>39</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>&lt;b&gt;Полученный штрих-код:&lt;/b&gt;</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>BarCodeFromScannerlabel</cstring>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>171</x>
+                                                    <y>13</y>
+                                                    <width>250</width>
+                                                    <height>23</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                </grid>
+                            </widget>
+                        </grid>
+                    </widget>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<tabstops>
+    <tabstop>BarCodeFromUserlineEdit</tabstop>
+    <tabstop>Nextbutton</tabstop>
+    <tabstop>ClearBarCodeLineEdit_Button</tabstop>
+    <tabstop>ReturnButton2</tabstop>
+    <tabstop>CanselButton</tabstop>
+    <tabstop>AutoPref1</tabstop>
+    <tabstop>AutoPref2</tabstop>
+    <tabstop>AutoSuf1</tabstop>
+    <tabstop>AutoSuf2</tabstop>
+    <tabstop>Returnbutton</tabstop>
+    <tabstop>Save_to_main_form</tabstop>
+    <tabstop>Nextbutton_2</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in declaration">hwsrv.h</include>
+    <include location="global" impldecl="in declaration">qmessagebox.h</include>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="global" impldecl="in declaration">qvalidator.h</include>
+    <include location="local" impldecl="in implementation">autoform.ui.h</include>
+</includes>
+<variables>
+    <variable access="private">QString BarCode;</variable>
+    <variable>QIntValidator * AutoSu2;</variable>
+    <variable>QIntValidator * AutoSu1;</variable>
+    <variable>QIntValidator * AutoPr2;</variable>
+    <variable>QIntValidator * AutoPr1;</variable>
+    <variable access="public">int BaudRate;</variable>
+    <variable access="public">int PortNumber;</variable>
+    <variable access="public">int Pref1;</variable>
+    <variable access="public">int Pref2;</variable>
+    <variable access="public">int Suf1;</variable>
+    <variable access="public">int Suf2;</variable>
+    <variable access="public">int ErrNum;</variable>
+    <variable access="private">QTextCodec *DefCodec;</variable>
+    <variable access="public">bool returnPrefSuf;</variable>
+    <variable access="private">bool alt_flag;</variable>
+    <variable access="private">QString BarCodeString;</variable>
+    <variable access="public">int ScannerType;</variable>
+    <variable access="private">QTimer * timer;</variable>
+    <variable access="private">bool timer_flag;</variable>
+    <variable access="private">QRegExpValidator *barcodevalidator;</variable>
+</variables>
+<slots>
+    <slot>InsertParam( int TypeBCS, int PortNum, int BaudR, int Pr1, int Pr2, int Su1, int Su2 )</slot>
+    <slot>MyInit()</slot>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>Returnbutton_clicked()</slot>
+    <slot>Save_to_main_form_clicked()</slot>
+    <slot>Exit()</slot>
+    <slot>Saving()</slot>
+    <slot>Nextbutton_clicked()</slot>
+    <slot>LastPage()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+    <slot>ClearBarCodeLineEdit_Button_clicked()</slot>
+</slots>
+<functions>
+    <function returnType="QString">GetPar( int par_number )</function>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -1,0 +1,100 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>handleUnload</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>handleUnload</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>415</width>
+            <height>169</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Ручная выгрузка транзакций</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLabel" row="1" column="0">
+            <property name="name">
+                <cstring>textLabel2</cstring>
+            </property>
+            <property name="text">
+                <string>Дата и время окончания:</string>
+            </property>
+        </widget>
+        <widget class="QDateTimeEdit" row="1" column="1">
+            <property name="name">
+                <cstring>End_dateTimeEdit</cstring>
+            </property>
+        </widget>
+        <widget class="QDateTimeEdit" row="0" column="1">
+            <property name="name">
+                <cstring>Begin_dateTimeEdit</cstring>
+            </property>
+            <property name="dateTime">
+                <datetime>
+                    <year>2000</year>
+                    <month>1</month>
+                    <day>1</day>
+                    <hour>0</hour>
+                    <minute>0</minute>
+                    <second>0</second>
+                </datetime>
+            </property>
+        </widget>
+        <widget class="QLabel" row="0" column="0">
+            <property name="name">
+                <cstring>textLabel1</cstring>
+            </property>
+            <property name="text">
+                <string>Дата и время начала :</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>savelasttransCheckBox</cstring>
+            </property>
+            <property name="text">
+                <string>Помечать транзации выгруженными</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="3" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>DataTimeUnLoadButton</cstring>
+            </property>
+            <property name="text">
+                <string>Выгрузка транзакции</string>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<tabstops>
+    <tabstop>Begin_dateTimeEdit</tabstop>
+    <tabstop>End_dateTimeEdit</tabstop>
+    <tabstop>savelasttransCheckBox</tabstop>
+    <tabstop>DataTimeUnLoadButton</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in implementation">qtextcodec.h</include>
+    <include location="local" impldecl="in implementation">handleunload.ui.h</include>
+</includes>
+<slots>
+    <slot>closeEvent( QCloseEvent * ce )</slot>
+    <slot>CreateUnloadFlag( QString st )</slot>
+    <slot>DataTimeUnLoadButton_clicked( void )</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>SaveHUParam()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function returnType="int">Contingencies( void )</function>
+    <function returnType="QString">GenerateStr( void )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

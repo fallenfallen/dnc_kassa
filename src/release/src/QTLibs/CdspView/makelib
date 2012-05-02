@@ -1,0 +1,6 @@
+
+cp -v cdsp.h ../../../bin/include
+qmake
+make
+
+cp -v ./libdnccdspview.so ../../../bin/lib

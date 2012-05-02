@@ -1,0 +1,8 @@
+rm -vfR ./build/*
+rm -vfR ./release/*
+rm -vf ./moc/*
+rm -vf ./obj/*
+
+$1 ./Work1.pro
+make
+cp -vf ./dnc_taxinspector ../../../bin/bin

@@ -1,0 +1,9 @@
+rm -vfR ./moc
+rm -vfR ./obj
+
+$1 ./DiscountMobile.pro
+make
+cp -vf ./dnc_edsd ../../../bin/bin
+
+rm -vfR ./moc
+rm -vfR ./obj

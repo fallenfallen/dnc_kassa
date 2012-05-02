@@ -1,0 +1,5 @@
+qmake
+make
+cp -v ./daemon_unload ../../../bin/bin
+
+

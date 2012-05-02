@@ -1,0 +1,129 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>Autoschemeform</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>Autoschemeform</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>300</width>
+            <height>420</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>300</width>
+            <height>420</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Изменить автоматическую скидку</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="resizeMode">
+            <enum>Minimum</enum>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>layout1</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QListView" row="0" column="0" rowspan="1" colspan="2">
+                    <column>
+                        <property name="text">
+                            <string>Схема автоматических скидок</string>
+                        </property>
+                        <property name="clickable">
+                            <bool>false</bool>
+                        </property>
+                        <property name="resizable">
+                            <bool>true</bool>
+                        </property>
+                    </column>
+                <item>
+                    <property name="text">
+                        <string>Без схемы скидок</string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap></pixmap>
+                    </property>
+                </item>
+                    <property name="name">
+                        <cstring>AutoScheme_listView</cstring>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="0">
+                    <property name="name">
+                        <cstring>AutoschemeOK</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Применить</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton" row="1" column="1">
+                    <property name="name">
+                        <cstring>AutoschemeCansel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Отмена</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>AutoschemeCansel</sender>
+        <signal>clicked()</signal>
+        <receiver>Autoschemeform</receiver>
+        <slot>AutoschemeCansel_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>AutoschemeOK</sender>
+        <signal>clicked()</signal>
+        <receiver>Autoschemeform</receiver>
+        <slot>AutoschemeOK_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>AutoScheme_listView</tabstop>
+    <tabstop>AutoschemeOK</tabstop>
+    <tabstop>AutoschemeCansel</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">qtextcodec.h</include>
+    <include location="local" impldecl="in declaration">ware_const.h</include>
+    <include location="local" impldecl="in implementation">autoschemeform.ui.h</include>
+</includes>
+<variables>
+    <variable access="public">int Number_Group;</variable>
+    <variable access="private">int a_id;</variable>
+    <variable access="private">QTextCodec * cp1251Codec;</variable>
+    <variable access="private">QTextCodec * dbaseCodec;</variable>
+    <variable access="private">QTextCodec * systemCodec;</variable>
+    <variable access="private">bool exit_flag;</variable>
+</variables>
+<slots>
+    <slot>closeEvent( QCloseEvent * e )</slot>
+    <slot>AutoschemeCansel_clicked()</slot>
+    <slot>AutoschemeOK_clicked()</slot>
+    <slot>GetKeySequence()</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>makeKeyPress( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function returnType="int">FillAutoGroupListBox()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

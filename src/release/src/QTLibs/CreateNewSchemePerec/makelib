@@ -1,0 +1,8 @@
+
+
+
+qmake
+make
+cp -v .ui/newschemeperec.h ../../../bin/include
+cp -v ./libdncnewschemeperec.so ../../../bin/lib
+

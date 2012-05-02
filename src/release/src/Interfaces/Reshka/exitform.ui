@@ -1,0 +1,111 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>exitForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>exitForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>300</width>
+            <height>200</height>
+        </rect>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>300</width>
+            <height>200</height>
+        </size>
+    </property>
+    <property name="caption">
+        <string>Выход</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="resizeMode">
+            <enum>Fixed</enum>
+        </property>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>ExitButton</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>120</width>
+                    <height>40</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Выключить</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>RebootButton</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>120</width>
+                    <height>40</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Перезагрузить</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>CloseReshkaButton</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>120</width>
+                    <height>40</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Закрыть программу</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>CanselButton</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>120</width>
+                    <height>40</height>
+                </size>
+            </property>
+            <property name="text">
+                <string>Отмена</string>
+            </property>
+        </widget>
+    </vbox>
+</widget>
+<tabstops>
+    <tabstop>CanselButton</tabstop>
+    <tabstop>ExitButton</tabstop>
+    <tabstop>RebootButton</tabstop>
+    <tabstop>CloseReshkaButton</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in implementation">exitform.ui.h</include>
+</includes>
+<slots>
+    <slot>Exit( void )</slot>
+    <slot>Reboot( void )</slot>
+    <slot>CloseReshka( void )</slot>
+    <slot>Up( void )</slot>
+    <slot>Down( void )</slot>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -1,0 +1,10 @@
+
+
+g++ -Wno-deprecated -fpic -c -I/usr/include/pgsql -I ../../../bin/include receipt.cpp copyinfo.cpp discount.cpp positiontaxes.cpp recordreceipt.cpp taxrate.cpp
+g++ -shared -WI, -L../../../bin/lib -ldncwaresystem -o libdncreceipt.so receipt.o copyinfo.o discount.o positiontaxes.o recordreceipt.o taxrate.o
+
+cp -v *.h ../../../bin/include
+cp -v ./libdncreceipt.so ../../../bin/lib
+
+rm *.o
+

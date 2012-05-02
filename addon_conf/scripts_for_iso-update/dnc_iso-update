@@ -1,0 +1,29 @@
+#!/bin/bash -x
+
+FILE=`zenity --file-selection --title="Выберите файл обновления ДЭНСИ:КАССА" --file-filter=*.iso`
+
+case $? in
+	0)
+zenity --question --text="Выбран файл \"$FILE\".\nПродоложить установку?"
+if [ $? = 1 ]; then
+exit
+fi
+		;;
+
+	1)
+
+zenity --info --text="Файл не выбран, повторите попытку снова..."
+exit 
+		;;
+	-1)
+zenity --error --text="Произошла неожиданная ошибка..." 
+exit
+		;;
+esac
+
+
+mount -o loop -t iso9660 $FILE /media/cdrom
+
+/media/cdrom/setup/setup_update
+
+umount /media/cdrom

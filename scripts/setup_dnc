@@ -1,0 +1,338 @@
+#!/bin/bash -x 
+
+echo "#########################" > /tmp/dnc_setup.log
+echo "#Определение архитектуры#" >> /tmp/dnc_setup.log
+echo "#########################" >> /tmp/dnc_setup.log
+echo "1"
+echo "# Определение архитектуры..."
+CHPST=`uname -m`
+echo "$CHPST" >> /tmp/dnc_setup.log
+
+cd /media/cdrom/dnc_kassa
+
+case "$CHPST" in
+	x86_64) BIN='./bin_64'
+		LIBS='./libs_64'
+		LDES='/usr/lib64'
+		QT4LIBS='./addon_conf/qt4_libs/Qt4Libs64'
+		QT4ADDON_CONF='Qt4Libs.tar.gz'
+		
+		
+		;;
+		
+	*) 	BIN='./bin'
+		LIBS='./libs'
+		LDES='/usr/lib'
+		QT4LIBS='./addon_conf/qt4_libs/Qt4Libs32'
+		QT4ADDON_CONF='Qt4Libs.tar.gz'
+
+		
+		;;
+				
+esac
+
+echo "####################" >> /tmp/dnc_setup.log
+echo "#Начинаем установку#" >> /tmp/dnc_setup.log
+echo "####################" >> /tmp/dnc_setup.log
+echo "5"
+echo "# Начинаем установку..."
+rm -fv /etc/sysconfig/autologin >> /tmp/dnc_setup.log
+echo 'AUTOLOGIN=yes' > /etc/sysconfig/autologin
+echo 'USER='$USER >> /etc/sysconfig/autologin
+echo 'EXEC=/usr/bin/startx.autologin' >> /etc/sysconfig/autologin
+chown -v root.root /etc/sysconfig/autologin >> /tmp/dnc_setup.log
+chmod -v 644 /etc/sysconfig/autologin >> /tmp/dnc_setup.log
+
+rm -fv /etc/sysconfig/speedboot >> /tmp/dnc_setup.log
+echo 'SPEEDBOOT=no' > /etc/sysconfig/speedboot
+chown -v root.root /etc/sysconfig/speedboot >> /tmp/dnc_setup.log
+chmod -v 644 /etc/sysconfig/speedboot >> /tmp/dnc_setup.log
+
+# configuring Postgresql
+echo "#########################" >> /tmp/dnc_setup.log
+echo '#Настраиваем Postgres...#' >> /tmp/dnc_setup.log
+echo "#########################" >> /tmp/dnc_setup.log
+echo "15"
+echo "# Настраиваем Postgres..."
+ln -sv /etc/rc.d/init.d/postgresql /etc/rc.d/rc0.d/K15postgresql >> /tmp/dnc_setup.log
+ln -sv /etc/rc.d/init.d/postgresql /etc/rc.d/rc1.d/K15postgresql >> /tmp/dnc_setup.log
+ln -sv /etc/rc.d/init.d/postgresql /etc/rc.d/rc2.d/K15postgresql >> /tmp/dnc_setup.log
+ln -sv /etc/rc.d/init.d/postgresql /etc/rc.d/rc3.d/S52postgresql >> /tmp/dnc_setup.log
+ln -sv /etc/rc.d/init.d/postgresql /etc/rc.d/rc4.d/S52postgresql >> /tmp/dnc_setup.log
+ln -sv /etc/rc.d/init.d/postgresql /etc/rc.d/rc5.d/S52postgresql >> /tmp/dnc_setup.log
+ln -sv /etc/rc.d/init.d/postgresql /etc/rc.d/rc6.d/K15postgresql >> /tmp/dnc_setup.log
+
+#starting Postgresql
+echo "#########################" >> /tmp/dnc_setup.log
+echo '#Запускаем PostgreSQL...#' >> /tmp/dnc_setup.log
+echo "#########################" >> /tmp/dnc_setup.log
+echo "20"
+echo "# Запускаем PostgreSQL..."
+/etc/rc.d/init.d/postgresql start >> /tmp/dnc_setup.log
+
+# installing configuration files
+echo "####################################" >> /tmp/dnc_setup.log
+echo '#Копируем конфигурационные файлы...#' >> /tmp/dnc_setup.log
+echo "####################################" >> /tmp/dnc_setup.log
+echo "25"
+echo "# Копируем конфигурационные файлы..."
+mkdir -v /etc/dancy >> /tmp/dnc_setup.log
+chmod -v 777 /etc/dancy >> /tmp/dnc_setup.log
+cp -v ./etc/dancy/* /etc/dancy >> /tmp/dnc_setup.log
+chmod -v 666 /etc/dancy/* >> /tmp/dnc_setup.log
+mkdir -v /etc/hwsrv >> /tmp/dnc_setup.log
+chmod -v 777 /etc/hwsrv >> /tmp/dnc_setup.log
+cp -v ./etc/hwsrv/* /etc/hwsrv >> /tmp/dnc_setup.log
+chmod -v 666 /etc/hwsrv/* >> /tmp/dnc_setup.log
+mkdir -v /tmp/dancy >> /tmp/dnc_setup.log
+chmod -v 777 /tmp/dancy >> /tmp/dnc_setup.log
+mkdir -v /tmp/dancy/upload_log >> /tmp/dnc_setup.log
+chmod -v 777 /tmp/dancy/upload_log >> /tmp/dnc_setup.log
+mkdir -v /tmp/dancy/unload_log >> /tmp/dnc_setup.log
+chmod -v 777 /tmp/dancy/unload_log >> /tmp/dnc_setup.log
+mkdir -v /tmp/dancy/postgres_log >> /tmp/dnc_setup.log
+chmod -v 777 /tmp/dancy/postgres_log >> /tmp/dnc_setup.log
+mkdir -v /tmp/dancy/conf >> /tmp/dnc_setup.log
+chmod -v 777 /tmp/dancy/conf >> /tmp/dnc_setup.log
+mkdir -v /usr/share/dnc >> /tmp/dnc_setup.log
+mkdir -v /usr/share/dnc/movie >> /tmp/dnc_setup.log
+chmod -v 777 /usr/share/dnc/movie >> /tmp/dnc_setup.log
+cp -v ./movie/* /usr/share/dnc/movie >> /tmp/dnc_setup.log
+mkdir -v /usr/share/dnc/print_doc >> /tmp/dnc_setup.log
+chmod -v 777 /usr/share/dnc/print_doc >> /tmp/dnc_setup.log
+cp -v ./Example_print_document/* /usr/share/dnc/print_doc >> /tmp/dnc_setup.log
+chmod -v 666 /usr/share/dnc/print_doc/* >> /tmp/dnc_setup.log
+cp -v ./dnc_kassa/addon_conf/Export_Import_bd/* /usr/bin >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_Transaction_import >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_LinCash_import >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_Transaction_export >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_LinCash_export >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_Transaction_import_root >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_LinCash_import_root >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_Transaction_export_root >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_LinCash_export_root >> /tmp/dnc_setup.log
+mkdir -v /usr/share/dnc/icons_for_icewm_menu >> /tmp/dnc_setup.log
+chmod -v 777 /usr/share/dnc/icons_for_icewm_menu >> /tmp/dnc_setup.log
+cp -v ./addon_conf/icons_for_icewm_menu/* /usr/share/dnc/icons_for_icewm_menu >> /tmp/dnc_setup.logwm_menu
+chmod -v 777 /usr/share/dnc/icons_for_icewm_menu/* >> /tmp/dnc_setup.log
+cp -v ./addon_conf/dnc_update_din /usr/bin >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_update_din >> /tmp/dnc_setup.log
+cp -v $QT4LIBS/qt.conf /usr/local/bin/ >> /tmp/dnc_setup.log
+mkdir -v $LDES/qt4 >> /tmp/dnc_setup.log
+chmod -v 777 $LDES/qt4 >> /tmp/dnc_setup.log
+mkdir -v $LDES/qt4/plugins >> /tmp/dnc_setup.log
+chmod -v 777 $LDES/qt4/plugins >> /tmp/dnc_setup.log
+mkdir -v $LDES/qt4/plugins/sqldrivers >> /tmp/dnc_setup.log
+chmod -v 777 $LDES/qt4/plugins/sqldrivers >> /tmp/dnc_setup.log
+
+# installing binary programs and scripts
+echo "############################" >> /tmp/dnc_setup.log
+echo '#Устанавливаем программы...#' >> /tmp/dnc_setup.log
+echo "############################" >> /tmp/dnc_setup.log
+echo "30"
+echo "# Устанавливаем программы..."
+cp -v $BIN/Display /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/Display >> /tmp/dnc_setup.log
+cp -v $BIN/RMK /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/RMK >> /tmp/dnc_setup.log
+cp -v $BIN/SetupLoadUnload /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/SetupLoadUnload >> /tmp/dnc_setup.log
+cp -v $BIN/WareProject /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/WareProject >> /tmp/dnc_setup.log
+cp -v $BIN/AccessRights /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/AccessRights >> /tmp/dnc_setup.log
+cp -v $BIN/confGUI /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/confGUI >> /tmp/dnc_setup.log
+cp -v $BIN/daemon_unload /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/daemon_unload >> /tmp/dnc_setup.log
+cp -v $BIN/reshka /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/reshka >> /tmp/dnc_setup.log
+cp -v $BIN/upload /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/upload >> /tmp/dnc_setup.log
+cp -v $BIN/run_reshka /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/run_reshka >> /tmp/dnc_setup.log
+cp -v $BIN/FindHardPath /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/FindHardPath >> /tmp/dnc_setup.log
+cp -v $BIN/dnc_update /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/dnc_update >> /tmp/dnc_setup.log
+cp -v $BIN/update_from_cd /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/update_from_cd >> /tmp/dnc_setup.log
+cp -v $BIN/reshkaver /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/reshkaver >> /tmp/dnc_setup.log
+cp -v $BIN/SectionSetup /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/SectionSetup >> /tmp/dnc_setup.log
+cp -v $BIN/dnc_taxinspector /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/dnc_taxinspector >> /tmp/dnc_setup.log
+cp -v $BIN/dnc_screen_scrot /usr/bin >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/dnc_screen_scrot >> /tmp/dnc_setup.log
+cp -v $BIN/dnc_edsd /usr/bin/ >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/dnc_edsd >> /tmp/dnc_setup.log
+cp -v $BIN/dnc_configtool /usr/bin/ >> /tmp/dnc_setup.log
+chmod -v 755 /usr/bin/dnc_configtool >> /tmp/dnc_setup.log
+
+# installing share loaded libraries
+echo "############################" >> /tmp/dnc_setup.log
+echo '#Устанавливаем библиотеки...#' >> /tmp/dnc_setup.log
+echo "############################" >> /tmp/dnc_setup.log
+echo "50"
+echo "# Устанавливаем библиотеки..."
+cp -v $LIBS/* $LDES >> /tmp/dnc_setup.log
+chmod -v 755 $LDES/libdnc* >> /tmp/dnc_setup.log
+chmod -v 755 $LDES/libhwsrv.so >> /tmp/dnc_setup.log
+ln -sv $LDES/libdncdecoder_qt4.so.1.0.0 $LDES/libdncdecoder_qt4.so.1 >> /tmp/dnc_setup.log
+
+# making symlinks
+echo "#####################" >> /tmp/dnc_setup.log
+echo "#Создаем symlinks...#" >> /tmp/dnc_setup.log
+echo "#####################" >> /tmp/dnc_setup.log
+echo "70"
+echo "# Создаем symlinks..."
+link -v $LDES/libpq.so.5 $LDES/libpq.so.4 >> /tmp/dnc_setup.log
+ln -sv /etc/rc.d/rc.local /etc/rc.d/rc5.d/S53local >> /tmp/dnc_setup.log
+rm -fv /etc/rc.d/rc5.d/S99local >> /tmp/dnc_setup.log
+rm -fv /etc/rc.d/rc5.d/S03iptables >> /tmp/dnc_setup.log
+rm -fv /etc/rc.d/rc5.d/S03ip6tables >> /tmp/dnc_setup.log
+rm -fv /etc/rc.d/rc5.d/S51shorewall >> /tmp/dnc_setup.log
+
+# adding permissions into boottime script
+echo "##############################################" >> /tmp/dnc_setup.log
+echo '#Устанавливаем права доступа к устройствам...#' >> /tmp/dnc_setup.log
+echo "##############################################" >> /tmp/dnc_setup.log
+echo "80"
+echo "# Устанавливаем права доступа к устройствам..."
+echo 'chmod 644 `FindHardPath`' >> /etc/rc.d/rc.local
+echo 'chmod 666 /dev/ttyS*' >> /etc/rc.d/rc.local
+echo '/usr/bin/dnc_update' >> /etc/rc.d/rc.local
+echo '/usr/bin/upload > /tmp/upload_daemon.out' >> /etc/rc.d/rc.local
+echo '/usr/bin/daemon_unload > /tmp/unload_daemon.out' >> /etc/rc.d/rc.local
+echo '/usr/bin/dnc_edsd &' >> /etc/rc.d/rc.local
+echo '/usr/bin/Display > /tmp/display_daemon.out' >> /etc/rc.d/rc.sysinit
+echo "sed -i 's/smbfs[ ]/cifs iocharset=utf8,/g' /etc/fstab" >> /etc/rc.d/rc.sysinit
+echo 'find /home -iname .Xauth* -exec rm -f {} \;' >> /etc/rc.d/rc.sysinit
+sed -i '\"action \"Setting default font ($SYSFONT): \" /sbin/setsysfont"a\if [ -x /bin/setfont ]; then\n/bin/setfont $SYSFONT\nfi' "/etc/rc.d/rc.sysinit"
+sed -i 's/Section \"ServerFlags\"/Section \"ServerFlags\"\n\tOption \"BlankTime\" \"0\"\n\tOption \"StandbyTime\" \"0\"\n\tOption \"SuspendTime\" \"0\"\n\tOption \"OffTime\" \"0\"/'  "/etc/X11/xorg.conf"
+
+
+#creating roles and databases
+echo "########################################" >> /tmp/dnc_setup.log
+echo '#Создаём пользователей и базы данных...#' >> /tmp/dnc_setup.log
+echo "########################################" >> /tmp/dnc_setup.log
+echo "85"
+echo "# Создаём пользователей и базы данных..."
+sudo -u postgres createuser -se kassir >> /tmp/dnc_setup.log
+sudo -u postgres createdb -e LinCash -E UTF8 >> /tmp/dnc_setup.log
+sudo -u postgres createdb -e Transaction -E UTF8 >> /tmp/dnc_setup.log
+sudo -u postgres createdb -e dnc_eds -E UTF8 >> /tmp/dnc_setup.log
+sudo -u postgres psql -e LinCash < ./db/LinCash/create_tables.sql >> /tmp/dnc_setup.log
+sudo -u postgres psql -e LinCash < ./db/LinCash/insert_data.sql >> /tmp/dnc_setup.log
+sudo -u postgres psql -e Transaction < ./db/Transaction/create_tables.sql >> /tmp/dnc_setup.log
+sudo -u postgres psql -e Transaction < ./db/Transaction/insert_data.sql >> /tmp/dnc_setup.log
+sudo -u postgres psql -e dnc_eds < ./db/DiscountMobile/create_tables.sql >> /tmp/dnc_setup.log
+sudo -u postgres psql -e dnc_eds < ./db/DiscountMobile/insert_data.sql >> /tmp/dnc_setup.log
+
+
+
+echo "########################" >> /tmp/dnc_setup.log
+echo '#Последние настройки...#' >> /tmp/dnc_setup.log
+echo "########################" >> /tmp/dnc_setup.log
+echo "90"
+echo "# Последние настройки..."
+# configuring samba server
+echo "# configuring samba server" >> /tmp/dnc_setup.log
+mkdir -v /var/Exchange >> /tmp/dnc_setup.log
+chmod -v 777 /var/Exchange >> /tmp/dnc_setup.log
+cp -v /etc/samba/smb.conf /etc/samba/smb.conf.dnc >> /tmp/dnc_setup.log
+cp -v ./addon_conf/smb.conf /etc/samba/smb.conf >> /tmp/dnc_setup.log
+
+# configuring icewm
+echo "# configuring icewm" >> /tmp/dnc_setup.log
+mkdir -v /etc/icewm >> /tmp/dnc_setup.log
+chmod -v 777 /etc/icewm >> /tmp/dnc_setup.log
+cp -v ./addon_conf/icewm/* /etc/icewm >> /tmp/dnc_setup.log
+chmod -v 666 /etc/icewm/* >> /tmp/dnc_setup.log
+chmod -v 777 /etc/icewm/startup >> /tmp/dnc_setup.log
+rm -fv /etc/X11/xinit.d/50pulseaudio >> /tmp/dnc_setup.log
+rm -fv /etc/X11/xinit.d/70net_applet >> /tmp/dnc_setup.log
+rm -fv /etc/X11/xinit.d/draksnapshot-applet.xinit >> /tmp/dnc_setup.log
+rm -fv /etc/X11/xinit.d/mdkapplet >> /tmp/dnc_setup.log
+cp -v /usr/bin/icewmtray /usr/bin/icewmtray.save >> /tmp/dnc_setup.log
+rm -fv /usr/bin/icewmtray >> /tmp/dnc_setup.log
+cp -v /usr/bin/icewmbg /usr/bin/icewmbg.save >> /tmp/dnc_setup.log
+rm -fv /usr/bin/icewmbg >> /tmp/dnc_setup.log
+
+
+# configuring Qt
+echo "# configuring Qt" >> /tmp/dnc_setup.log
+cp -v ./addon_conf/qtrc /etc/qtrc >> /tmp/dnc_setup.log
+#cp -v ./addon_conf/Trolltech.conf /home/$USER/.config/Trolltech.conf >> /tmp/dnc_setup.log
+
+# making update system for DNC project
+echo "# making update system for DNC project" >> /tmp/dnc_setup.log
+mkdir -v /dnc_update >> /tmp/dnc_setup.log
+mkdir -v /dnc_update/bin >> /tmp/dnc_setup.log
+mkdir -v /dnc_update/libs >> /tmp/dnc_setup.log
+mkdir -v /dnc_update/libs64 >> /tmp/dnc_setup.log
+chmod -v 777 /dnc_update >> /tmp/dnc_setup.log
+chmod -v 777 /dnc_update/bin >> /tmp/dnc_setup.log
+chmod -v 777 /dnc_update/libs >> /tmp/dnc_setup.log
+chmod -v 777 /dnc_update/libs64 >> /tmp/dnc_setup.log
+
+# making archdb system for DNC project
+echo "# making archdb system for DNC project" >> /tmp/dnc_setup.log
+mkdir -v /dnc_arch >> /tmp/dnc_setup.log
+chmod -v 777 /dnc_arch >> /tmp/dnc_setup.log
+
+# dnc_iso_update
+echo "# dnc_iso_update" >> /tmp/dnc_setup.log
+cp -v ./addon_conf/scripts_for_iso-update/* /usr/bin >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_gksu_iso >> /tmp/dnc_setup.log >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_iso-update >> /tmp/dnc_setup.log >> /tmp/dnc_setup.log
+
+# Export\Import BD
+echo "# Export\Import BD" >> /tmp/dnc_setup.log
+cp -v ./addon_conf/Export_Import_bd/* /usr/bin >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_Transaction_import >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_LinCash_import >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_Transaction_export >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_LinCash_export >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_Transaction_import_root >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_LinCash_import_root >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_Transaction_export_root >> /tmp/dnc_setup.log
+chmod -v 777 /usr/bin/dnc_LinCash_export_root >> /tmp/dnc_setup.log
+
+# Qt4Libs
+echo "# Qt4Libs" >> /tmp/dnc_setup.log
+mkdir -v /tmp/Qt4_libs_tmp >> /tmp/dnc_setup.log
+chmod -v 777 /tmp/Qt4_libs_tmp >> /tmp/dnc_setup.log
+tar -zxvf $QT4LIBS/$QT4ADDON_CONF -C /tmp/Qt4_libs_tmp >> /tmp/dnc_setup.log
+cp -v /tmp/Qt4_libs_tmp/libQtNetwork.so.4.7.0 $LDES >> /tmp/dnc_setup.log
+cp -v /tmp/Qt4_libs_tmp/libQtSql.so.4.7.0 $LDES >> /tmp/dnc_setup.log
+cp -v /tmp/Qt4_libs_tmp/libQtCore.so.4.7.0 $LDES >> /tmp/dnc_setup.log
+cp -v /tmp/Qt4_libs_tmp/libQtGui.so.4.7.0 $LDES >> /tmp/dnc_setup.log
+ln -sv $LDES/libQtCore.so.4.7.0 $LDES/libQtCore.so.4 >> /tmp/dnc_setup.log
+ln -sv $LDES/libQtGui.so.4.7.0 $LDES/libQtGui.so.4 >> /tmp/dnc_setup.log
+ln -sv $LDES/libQtNetwork.so.4.7.0 $LDES/libQtNetwork.so.4 >> /tmp/dnc_setup.log
+ln -sv $LDES/libQtSql.so.4.7.0 $LDES/libQtSql.so.4 >> /tmp/dnc_setup.log
+cp -v /tmp/Qt4_libs_tmp/libqsqlpsql.so $LDES/qt4/plugins/sqldrivers >> /tmp/dnc_setup.log
+chmod -v 755 $LDES/qt4/plugins/sqldrivers/libqsqlpsql.so >> /tmp/dnc_setup.log
+rm -frv /tmp/Qt4_libs_tmp >> /tmp/dnc_setup.log
+
+# making dnc_menu
+cd /boot
+mkdir /tmp/dnc_menu
+cp ./gfxmenu /tmp/dnc_menu ; cd /tmp/dnc_menu
+cpio -idmv <gfxmenu
+rm -f ./gfxmenu
+ls > 111
+sed -i '1d' ./111
+rm -f ./back.jpg
+cp /media/cdrom/i586/isolinux/back.jpg /tmp/dnc_menu/
+cpio -of < 111 > dnc_menu
+cp ./dnc_menu /boot/
+cd /boot/grub
+sed -i 's/\(.*\)gfxmenu/\1dnc_menu/' "./menu.lst"
+rm -fr /tmp/dnc_menu/
+
+echo "100"
+echo "Установка завершена" >> /tmp/dnc_setup.log
+

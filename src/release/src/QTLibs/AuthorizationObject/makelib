@@ -1,0 +1,5 @@
+
+qmake
+make
+cp -v authorization.h  ../../../bin/include
+cp -v ./libdncauthobj.so ../../../bin/lib

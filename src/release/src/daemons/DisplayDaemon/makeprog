@@ -1,0 +1,2 @@
+g++  -Wno-deprecated -o  Display demon.cpp -lpthread -lhwsrv
+cp -v ./Display ../../../bin/bin

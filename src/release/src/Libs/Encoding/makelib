@@ -1,0 +1,9 @@
+
+
+g++ -Wno-deprecated -fpic -c  encoding.cpp
+g++ -shared -WI, -o libdncencoding.so encoding.o
+
+cp -v encoding.h ../../../bin/include
+cp -v ./libdncencoding.so ../../../bin/lib
+
+rm *.o

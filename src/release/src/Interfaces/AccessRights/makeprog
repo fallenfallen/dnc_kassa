@@ -1,0 +1,4 @@
+qmake
+make
+cp -v ./AccessRights ../../../bin/bin
+

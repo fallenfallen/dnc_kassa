@@ -1,0 +1,61 @@
+#!/bin/bash -x
+
+FILE=`zenity --file-selection --title="Выберите файл архива дампа БД Transaction" --file-filter=Transaction*.gz`
+
+case $? in
+	0)
+zenity --question --text="Выбран файл \"$FILE\".\nПродоложить замену текущей БД на БД из выбранного архива?\nВНИМАНИЕ!!! Все данные в текущей БД будут удалены!!! Перед восстановлением БД закройте ДЭНСИ:КАССА."
+if [ $? = 1 ]; then
+exit 0
+fi
+		;;
+
+	1)
+
+zenity --info --text="Файл не выбран, повторите попытку снова..."
+exit 0
+		;;
+	-1)
+zenity --error --text="Произошла неожиданная ошибка..." 
+exit 0
+		;;
+esac
+
+(
+echo "10"
+echo "# Удаляем текущую БД Transaction..."
+sudo -u postgres dropdb Transaction
+if [ $? = 1 ]; then
+zenity --error --text="Для продолжения работы необходимо закрыть ДЭНСИ:КАССА"
+	if [ $? = 1 ]; then
+	zenity --error --text="Восстановление БД Transaction было отменено"
+	exit 0
+	else
+	sleep 10
+	dropdb Transaction
+			if [ $? = 1 ]; then
+			zenity --error --text="Превышено время ожидания ответа от БД Transaction, повторите попытку восстановленя с закрытой ДЭНСИ:КАССА"
+			exit 0
+			fi
+	fi
+fi
+
+echo "30"
+echo "# Создаем новую БД Transaction..."
+sudo -u postgres createdb Transaction -E UTF8
+echo "60"
+echo "# Распаковываем архив $FILE во временную папку..."
+cp $FILE /tmp/Transaction_dump.gz
+gzip -d /tmp/Transaction_dump.gz
+echo "90"
+echo "# Восстановление БД Transaction из выбранного архива..."
+sudo -u postgres psql Transaction < /tmp/Transaction_dump
+echo "99"
+echo "# Очищаем временную папку..."
+rm -f /tmp/Transaction_dump
+echo "100"
+zenity --info --text="Восстановление БД Transaction из выбранного архива завершено..."
+) |
+zenity --progress --title="Восстановление БД Transaction из выбранного архива" --auto-close
+
+

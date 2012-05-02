@@ -1,0 +1,62 @@
+#!/bin/bash -x
+
+FILE=`zenity --file-selection --title="Выберите файл архива дампа БД LinCash" --file-filter=LinCash*.gz`
+
+case $? in
+	0)
+zenity --question --text="Выбран файл \"$FILE\".\nПродоложить замену текущей БД на БД из выбранного архива?\nВНИМАНИЕ!!! Все данные в текущей БД будут удалены!!! Перед восстановлением БД закройте ДЭНСИ:КАССА."
+if [ $? = 1 ]; then
+exit 0
+fi
+		;;
+
+	1)
+
+zenity --info --text="Файл не выбран, повторите попытку снова..."
+exit 0
+		;;
+	-1)
+zenity --error --text="Произошла неожиданная ошибка..." 
+exit 0
+		;;
+esac
+
+(
+echo "10"
+echo "# Удаляем текущую БД LinCash..."
+sudo -u postgres dropdb LinCash
+if [ $? = 1 ]; then
+zenity --error --text="Для продолжения работы необходимо закрыть ДЭНСИ:КАССА"
+	if [ $? = 1 ]; then
+	zenity --error --text="Восстановление БД LinCash было отменено"
+	exit 0
+	else
+	sleep 10
+	dropdb LinCash
+			if [ $? = 1 ]; then
+			zenity --error --text="Превышено время ожидания ответа от БД LinCash, повторите попытку восстановленя с закрытой ДЭНСИ:КАССА"
+			exit 0
+			fi
+	
+	fi
+fi
+echo "30"
+echo "# Создаем новую БД LinCash..."
+sudo -u postgres createdb LinCash -E UTF8
+echo "60"
+echo "# Распаковываем архив $FILE во временную папку..."
+cp $FILE /tmp/LinCash_dump.gz
+gzip -d /tmp/LinCash_dump.gz
+echo "90"
+echo "# Восстановление БД LinCash из выбранного архива..."
+sudo -u postgres psql LinCash < /tmp/LinCash_dump
+echo "99"
+echo "# Очищаем временную папку..."
+rm -f /tmp/LinCash_dump
+echo "100"
+zenity --info --text="Восстановление БД LinCash из выбранного архива завершено..."
+) |
+zenity --progress --title="Восстановление БД LinCash из выбранного архива" --auto-close
+
+
+

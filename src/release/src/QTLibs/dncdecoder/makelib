@@ -1,0 +1,9 @@
+rm -vf ./*.o
+rm -vf ./*.so
+rm -vf ./Makefile
+cp -v *.h ../../../bin/include
+qmake
+make
+cp -v ./*.so ../../../bin/lib
+
+

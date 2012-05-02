@@ -1,0 +1,7 @@
+rm -vf ./build/Release/GNU-Linux-x86/*
+rm -vf ./dist/Release/GNU-Linux-x86/*
+rm -vf ./moc_*
+
+$1 ./nbproject/qt-Release.pro
+make
+cp -vf ./dist/Release/GNU-Linux-x86/* ../../../bin/bin

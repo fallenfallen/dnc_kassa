@@ -1,0 +1,17 @@
+#!/bin/bash
+
+(
+echo "10"
+echo "# Vacuumdb LinCash..."
+vacuumdb -U kassir LinCash
+echo "50"
+echo "# Dump LinCash..."
+FNAME=LinCash_$(date +%Y_%m_%d_%X)
+pg_dump -U kassir LinCash > /dnc_arch/$FNAME
+echo "90"
+echo "# Создаем архив $FNAME..."
+gzip -q /dnc_arch/*
+echo "100"
+zenity --info --text="Создан файл /dnc_arch/$FNAME"
+) |
+zenity --progress --title="Dump LinCash" --auto-close

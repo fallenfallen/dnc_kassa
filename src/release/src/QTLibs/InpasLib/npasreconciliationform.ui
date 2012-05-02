@@ -1,0 +1,76 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>npasReconciliationForm</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>npasReconciliationForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>430</width>
+            <height>102</height>
+        </rect>
+    </property>
+    <property name="font">
+        <font>
+            <pointsize>14</pointsize>
+        </font>
+    </property>
+    <property name="caption">
+        <string>Сверка итогов INPAS</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLabel">
+            <property name="name">
+                <cstring>statusTextLabel</cstring>
+            </property>
+            <property name="paletteForegroundColor">
+                <color>
+                    <red>240</red>
+                    <green>40</green>
+                    <blue>50</blue>
+                </color>
+            </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="alignment">
+                <set>AlignCenter</set>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>okPushButton</cstring>
+            </property>
+            <property name="text">
+                <string>Провести сверку итогов</string>
+            </property>
+        </widget>
+    </vbox>
+</widget>
+<includes>
+    <include location="local" impldecl="in implementation">hwsrv.h</include>
+    <include location="global" impldecl="in implementation">qtextcodec.h</include>
+    <include location="local" impldecl="in implementation">const.h</include>
+    <include location="local" impldecl="in implementation">npasreconciliationform.ui.h</include>
+</includes>
+<slots>
+    <slot>keyPressEvent( QKeyEvent * k )</slot>
+    <slot>Reconciliation()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual">destroy()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

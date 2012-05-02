@@ -1,0 +1,8 @@
+#!/bin/bash
+if ! gksu --message "Введите пароль администратора" "/usr/bin/dnc_LinCash_import" ; then
+  if [ $? = 0 ]; then
+  exit
+  else
+zenity --warning --text "Введите правильный пароль администратора" ;
+  fi
+fi

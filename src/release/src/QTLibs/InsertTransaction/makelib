@@ -1,0 +1,6 @@
+
+qmake
+make
+cp -v insert_transaction.h ../../../bin/include
+cp -v ./libdncinserttransaction.so ../../../bin/lib
+
