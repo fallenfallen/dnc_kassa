@@ -1,17 +1,26 @@
 #!/bin/bash
 
-#arch depends: qt3, gcc43
+#depends: qt3, gcc43
 
 
 touch -t 201204200000 `find`
 
 QT4MAKE=/usr/bin/qmake
+
 mkdir $PWD/usr/bin -p
 ln -s /usr/bin/gcc-4.3 $PWD/usr/bin/gcc
 ln -s /usr/bin/g++-4.3 $PWD/usr/bin/g++
 ln -s /usr/bin/c++-4.3 $PWD/usr/bin/c++
 ln -s /usr/bin/cpp-4.3 $PWD/usr/bin/cpp
 ln -s /opt/qt/bin/qmake $PWD/usr/bin/qmake
+
+Arch=`uname -m`
+if [ "$Arch" == "i686" ];then
+    cp $PWD/hwsrv/32bit/libhwsrv.so $PWD/bin/lib
+else
+    cp $PWD/hwsrv/64bit/libhwsrv.so $PWD/bin/lib
+fi
+
 PATH="$PWD/usr/bin/:$PATH"
 
 cd src/Libs/
@@ -492,7 +501,7 @@ cd DisplayDaemon
 echo ""
 echo "/daemons/DisplayDaemon"
 echo ""
-./makeprog
+./makeprog_arch
 if [ $? -ne 0 ];then
     echo "ERROR"
     exit 1
