@@ -388,7 +388,7 @@ cd DevicesConf
 echo ""
 echo "/Interfaces/DevicesConf"
 echo ""
-./makeprog_arch
+./makeprog_arch.sh
 if [ $? -ne 0 ];then
     echo "ERROR"
     exit 1
@@ -421,7 +421,7 @@ cd RMK
 echo ""
 echo "/Interfaces/RMK"
 echo ""
-./makeprog_arch
+./makeprog_arch.sh
 if [ $? -ne 0 ];then
     echo "ERROR"
     exit 1
@@ -454,7 +454,7 @@ cd WareProject
 echo ""
 echo "/Interfaces/WareProject"
 echo ""
-./makeprog_arch
+./makeprog_arch.sh
 if [ $? -ne 0 ];then
     echo "ERROR"
     exit 1
@@ -501,7 +501,7 @@ cd DisplayDaemon
 echo ""
 echo "/daemons/DisplayDaemon"
 echo ""
-./makeprog_arch
+./makeprog_arch.sh
 if [ $? -ne 0 ];then
     echo "ERROR"
     exit 1
