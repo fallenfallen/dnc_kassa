@@ -17,8 +17,10 @@ ln -s /opt/qt/bin/qmake $PWD/usr/bin/qmake
 Arch=`uname -m`
 if [ "$Arch" == "i686" ];then
     cp $PWD/hwsrv/32bit/libhwsrv.so $PWD/bin/lib
+    cp $PWD/bin_nosource/32bit/* $PWD/bin/bin
 else
     cp $PWD/hwsrv/64bit/libhwsrv.so $PWD/bin/lib
+    cp $PWD/bin_nosource/64bit/* $PWD/bin/bin
 fi
 
 PATH="$PWD/usr/bin/:$PATH"
